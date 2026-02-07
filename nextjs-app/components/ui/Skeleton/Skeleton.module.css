@@ -1,0 +1,98 @@
+/**
+ * Skeleton Styles
+ * CSS Module for Skeleton loading component
+ */
+
+.skeleton {
+    display: block;
+    background: linear-gradient(90deg,
+            var(--fidelity-light-gray) 25%,
+            #e0e0e0 50%,
+            var(--fidelity-light-gray) 75%);
+    background-size: 200% 100%;
+    animation: shimmer 1.5s infinite;
+    border-radius: var(--border-radius-md);
+}
+
+@keyframes shimmer {
+    0% {
+        background-position: 200% 0;
+    }
+
+    100% {
+        background-position: -200% 0;
+    }
+}
+
+/* Variants */
+.text {
+    height: 1em;
+    border-radius: var(--border-radius-sm);
+}
+
+.circular {
+    border-radius: 50%;
+}
+
+.rectangular {
+    border-radius: var(--border-radius-md);
+}
+
+/* Multi-line text skeleton */
+.skeletonText {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+/* Skeleton Card */
+.skeletonCard {
+    background-color: var(--fidelity-white);
+    border-radius: var(--border-radius-lg);
+    overflow: hidden;
+    border: 1px solid var(--fidelity-light-gray);
+}
+
+.skeletonImage {
+    width: 100%;
+    aspect-ratio: 16 / 9;
+}
+
+.skeletonCardHeader {
+    padding: var(--spacing-md);
+}
+
+.skeletonCardContent {
+    padding: var(--spacing-md);
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-sm);
+}
+
+/* Skeleton List */
+.skeletonList {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-md);
+}
+
+.skeletonListItem {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-md);
+    padding: var(--spacing-md);
+    background-color: var(--fidelity-white);
+    border-radius: var(--border-radius-md);
+    border: 1px solid var(--fidelity-light-gray);
+}
+
+.skeletonAvatar {
+    flex-shrink: 0;
+}
+
+.skeletonListContent {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-xs);
+}

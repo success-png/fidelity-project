@@ -1,0 +1,10 @@
+{
+    "name": "fidelity-project",
+    "slug": "2026-02-06_fidelity-project",
+    "type": "Code",
+    "created": "2026-02-06",
+    "client": "KOZANN",
+    "template": "git_clone",
+    "repo_url": "https://github.com/JStaRFilms/fidelity-project",
+    "root": "C:\\CreativeOS\\01_Projects\\Clients\\KOZANN\\2026-02-06_fidelity-project"
+}

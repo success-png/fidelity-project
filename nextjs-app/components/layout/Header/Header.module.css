@@ -1,0 +1,133 @@
+/**
+ * Header Styles
+ * CSS Module for Header component
+ */
+
+/* Header container - sticky positioning */
+.header {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+/* Green top bar */
+.greenBar {
+    background: #2f7d2f;
+    color: #fff;
+}
+
+.greenBarInner {
+    height: 56px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+}
+
+/* Brand logo */
+.brand {
+    display: inline-flex;
+    align-items: center;
+}
+
+.brandLogo {
+    height: 28px;
+    width: auto;
+    display: block;
+}
+
+/* Header links container */
+.links {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+}
+
+/* Individual link */
+.link {
+    color: #fff;
+    font-size: 13px;
+    font-weight: 600;
+    white-space: nowrap;
+    transition: text-decoration 0.15s ease;
+}
+
+.link:hover {
+    text-decoration: underline;
+}
+
+/* CTA buttons */
+.button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    height: 32px;
+    padding: 0 14px;
+    border-radius: 999px;
+    font-size: 13px;
+    font-weight: 700;
+    white-space: nowrap;
+    transition: background-color 0.15s ease, color 0.15s ease;
+}
+
+/* Light button (Open Account) */
+.buttonLight {
+    background: #fff;
+    color: #111;
+}
+
+.buttonLight:hover {
+    background: #f2f2f2;
+}
+
+/* Outline button (Log In) */
+.buttonOutline {
+    background: transparent;
+    color: #fff;
+    border: 2px solid #fff;
+}
+
+.buttonOutline:hover {
+    background: rgba(255, 255, 255, 0.1);
+}
+
+/* White navigation bar */
+.whiteBar {
+    background: #fff;
+    border-bottom: 1px solid #e6e6e6;
+}
+
+.whiteBarInner {
+    height: 52px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+    .links {
+        gap: 12px;
+    }
+
+    .link {
+        display: none;
+    }
+
+    .buttonLight {
+        display: none;
+    }
+}
+
+@media (max-width: 480px) {
+    .greenBarInner {
+        height: 48px;
+    }
+
+    .whiteBarInner {
+        height: 48px;
+    }
+}

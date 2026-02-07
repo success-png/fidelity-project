@@ -1,0 +1,139 @@
+/**
+ * Badge Styles
+ * CSS Module for Badge component
+ */
+
+.badge {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-family: var(--font-family-sans);
+    font-weight: 500;
+    border-radius: var(--border-radius-full);
+    white-space: nowrap;
+    transition: background-color var(--transition-fast), color var(--transition-fast);
+}
+
+/* Sizes */
+.sm {
+    padding: 2px 8px;
+    font-size: 10px;
+    min-height: 18px;
+}
+
+.md {
+    padding: 4px 12px;
+    font-size: var(--font-size-xs);
+    min-height: 22px;
+}
+
+.lg {
+    padding: 6px 16px;
+    font-size: var(--font-size-sm);
+    min-height: 28px;
+}
+
+/* Variants - Filled */
+.default {
+    background-color: var(--fidelity-light-gray);
+    color: var(--fidelity-dark-gray);
+}
+
+.primary {
+    background-color: var(--fidelity-blue);
+    color: white;
+}
+
+.success {
+    background-color: var(--fidelity-green);
+    color: white;
+}
+
+.warning {
+    background-color: var(--fidelity-orange);
+    color: white;
+}
+
+.error {
+    background-color: var(--fidelity-red);
+    color: white;
+}
+
+.info {
+    background-color: var(--fidelity-light-green);
+    color: var(--fidelity-dark-green);
+}
+
+/* Outline Variants */
+.outline.default {
+    background-color: transparent;
+    border: 1px solid var(--fidelity-light-gray);
+    color: var(--fidelity-dark-gray);
+}
+
+.outline.primary {
+    background-color: transparent;
+    border: 1px solid var(--fidelity-blue);
+    color: var(--fidelity-blue);
+}
+
+.outline.success {
+    background-color: transparent;
+    border: 1px solid var(--fidelity-green);
+    color: var(--fidelity-green);
+}
+
+.outline.warning {
+    background-color: transparent;
+    border: 1px solid var(--fidelity-orange);
+    color: var(--fidelity-orange);
+}
+
+.outline.error {
+    background-color: transparent;
+    border: 1px solid var(--fidelity-red);
+    color: var(--fidelity-red);
+}
+
+.outline.info {
+    background-color: transparent;
+    border: 1px solid var(--fidelity-blue);
+    color: var(--fidelity-blue);
+}
+
+/* Status Dot */
+.statusDot {
+    display: inline-block;
+    border-radius: 50%;
+    flex-shrink: 0;
+}
+
+.statusDot.sm {
+    width: 8px;
+    height: 8px;
+}
+
+.statusDot.md {
+    width: 10px;
+    height: 10px;
+}
+
+.statusDot.success {
+    background-color: var(--fidelity-green);
+}
+
+.statusDot.warning {
+    background-color: var(--fidelity-orange);
+}
+
+.statusDot.error {
+    background-color: var(--fidelity-red);
+}
+
+.statusDot.info {
+    background-color: var(--fidelity-blue);
+}
+
+.statusDot.default {
+    background-color: var(--fidelity-medium-gray);
+}

@@ -1,0 +1,572 @@
+/**
+ * Fidelity Utility Classes
+ * Common utility classes from original style.css
+ */
+
+@import "./variables.css";
+
+/**
+ * Flexbox Utilities
+ */
+.flex {
+    display: flex;
+}
+
+.inline-flex {
+    display: inline-flex;
+}
+
+.flex-col {
+    flex-direction: column;
+}
+
+.flex-wrap {
+    flex-wrap: wrap;
+}
+
+.items-center {
+    align-items: center;
+}
+
+.items-start {
+    align-items: flex-start;
+}
+
+.items-end {
+    align-items: flex-end;
+}
+
+.justify-center {
+    justify-content: center;
+}
+
+.justify-between {
+    justify-content: space-between;
+}
+
+.justify-end {
+    justify-content: flex-end;
+}
+
+.gap-xs {
+    gap: var(--spacing-xs);
+}
+
+.gap-sm {
+    gap: var(--spacing-sm);
+}
+
+.gap-md {
+    gap: var(--spacing-md);
+}
+
+.gap-lg {
+    gap: var(--spacing-lg);
+}
+
+.gap-xl {
+    gap: var(--spacing-xl);
+}
+
+/**
+ * Grid Utilities
+ */
+.grid {
+    display: grid;
+}
+
+.grid-cols-2 {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.grid-cols-3 {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+/**
+ * Spacing Utilities
+ */
+.p-0 {
+    padding: 0;
+}
+
+.p-sm {
+    padding: var(--spacing-sm);
+}
+
+.p-md {
+    padding: var(--spacing-md);
+}
+
+.p-lg {
+    padding: var(--spacing-lg);
+}
+
+.p-xl {
+    padding: var(--spacing-xl);
+}
+
+.px-sm {
+    padding-left: var(--spacing-sm);
+    padding-right: var(--spacing-sm);
+}
+
+.px-md {
+    padding-left: var(--spacing-md);
+    padding-right: var(--spacing-md);
+}
+
+.px-lg {
+    padding-left: var(--spacing-lg);
+    padding-right: var(--spacing-lg);
+}
+
+.py-sm {
+    padding-top: var(--spacing-sm);
+    padding-bottom: var(--spacing-sm);
+}
+
+.py-md {
+    padding-top: var(--spacing-md);
+    padding-bottom: var(--spacing-md);
+}
+
+.py-lg {
+    padding-top: var(--spacing-lg);
+    padding-bottom: var(--spacing-lg);
+}
+
+.m-0 {
+    margin: 0;
+}
+
+.m-auto {
+    margin: auto;
+}
+
+.mt-auto {
+    margin-top: auto;
+}
+
+.mb-auto {
+    margin-bottom: auto;
+}
+
+.ml-auto {
+    margin-left: auto;
+}
+
+.mr-auto {
+    margin-right: auto;
+}
+
+.mt-sm {
+    margin-top: var(--spacing-sm);
+}
+
+.mt-md {
+    margin-top: var(--spacing-md);
+}
+
+.mt-lg {
+    margin-top: var(--spacing-lg);
+}
+
+.mt-xl {
+    margin-top: var(--spacing-xl);
+}
+
+.mb-sm {
+    margin-bottom: var(--spacing-sm);
+}
+
+.mb-md {
+    margin-bottom: var(--spacing-md);
+}
+
+.mb-lg {
+    margin-bottom: var(--spacing-lg);
+}
+
+.mb-xl {
+    margin-bottom: var(--spacing-xl);
+}
+
+.mb-2xl {
+    margin-bottom: var(--spacing-2xl);
+}
+
+/**
+ * Width & Height Utilities
+ */
+.w-full {
+    width: 100%;
+}
+
+.h-full {
+    height: 100%;
+}
+
+.h-auto {
+    height: auto;
+}
+
+.max-w-none {
+    max-width: none;
+}
+
+.max-w-xs {
+    max-width: 320px;
+}
+
+.max-w-sm {
+    max-width: 360px;
+}
+
+.max-w-md {
+    max-width: 440px;
+}
+
+.max-w-lg {
+    max-width: 560px;
+}
+
+.max-w-xl {
+    max-width: 640px;
+}
+
+.max-w-2xl {
+    max-width: 768px;
+}
+
+.max-w-3xl {
+    max-width: 960px;
+}
+
+.max-w-4xl {
+    max-width: 1024px;
+}
+
+.max-w-5xl {
+    max-width: 1280px;
+}
+
+/**
+ * Border Radius Utilities
+ */
+.rounded-sm {
+    border-radius: var(--border-radius-sm);
+}
+
+.rounded-md {
+    border-radius: var(--border-radius-md);
+}
+
+.rounded-lg {
+    border-radius: var(--border-radius-lg);
+}
+
+.rounded-xl {
+    border-radius: var(--border-radius-xl);
+}
+
+.rounded-full {
+    border-radius: var(--border-radius-full);
+}
+
+/**
+ * Box Shadow Utilities
+ */
+.shadow-sm {
+    box-shadow: var(--box-shadow-sm);
+}
+
+.shadow-md {
+    box-shadow: var(--box-shadow-md);
+}
+
+.shadow-lg {
+    box-shadow: var(--box-shadow-lg);
+}
+
+.shadow-card {
+    box-shadow: var(--box-shadow-card);
+}
+
+/**
+ * Border Utilities
+ */
+.border {
+    border: 1px solid var(--fidelity-light-gray);
+}
+
+.border-t {
+    border-top: 1px solid var(--fidelity-light-gray);
+}
+
+.border-b {
+    border-bottom: 1px solid var(--fidelity-light-gray);
+}
+
+.border-2 {
+    border-width: 2px;
+}
+
+/**
+ * Background Color Utilities
+ */
+.bg-fidelity-white {
+    background-color: var(--fidelity-white);
+}
+
+.bg-fidelity-off-white {
+    background-color: var(--fidelity-off-white);
+}
+
+.bg-fidelity-light-gray {
+    background-color: var(--fidelity-light-gray);
+}
+
+.bg-fidelity-green {
+    background-color: var(--fidelity-green);
+}
+
+.bg-fidelity-dark-green {
+    background-color: var(--fidelity-dark-green);
+}
+
+.bg-fidelity-header-green {
+    background-color: var(--fidelity-header-green);
+}
+
+.bg-fidelity-light-green {
+    background-color: var(--fidelity-light-green);
+}
+
+.bg-fidelity-transparent {
+    background-color: transparent;
+}
+
+/**
+ * Text Color Utilities
+ */
+.text-white {
+    color: white;
+}
+
+.text-black {
+    color: var(--fidelity-black);
+}
+
+/**
+ * Position Utilities
+ */
+.relative {
+    position: relative;
+}
+
+.absolute {
+    position: absolute;
+}
+
+.fixed {
+    position: fixed;
+}
+
+.sticky {
+    position: sticky;
+}
+
+.top-0 {
+    top: 0;
+}
+
+.left-0 {
+    left: 0;
+}
+
+.right-0 {
+    right: 0;
+}
+
+.bottom-0 {
+    bottom: 0;
+}
+
+.z-dropdown {
+    z-index: var(--z-dropdown);
+}
+
+.z-sticky-header {
+    z-index: var(--z-sticky-header);
+}
+
+/**
+ * Overflow Utilities
+ */
+.overflow-hidden {
+    overflow: hidden;
+}
+
+.overflow-visible {
+    overflow: visible;
+}
+
+.overflow-x-hidden {
+    overflow-x: hidden;
+}
+
+/**
+ * Opacity Utilities
+ */
+.opacity-0 {
+    opacity: 0;
+}
+
+.opacity-100 {
+    opacity: 1;
+}
+
+/**
+ * Visibility Utilities
+ */
+.invisible {
+    visibility: hidden;
+}
+
+.visible {
+    visibility: visible;
+}
+
+/**
+ * Transform Utilities
+ */
+.translate-y-0 {
+    transform: translateY(0);
+}
+
+.translate-y-6 {
+    transform: translateY(6px);
+}
+
+.translate-y-8 {
+    transform: translateY(8px);
+}
+
+/**
+ * Transition Utilities
+ */
+.transition-all {
+    transition: all var(--transition-normal);
+}
+
+.transition-fast {
+    transition: all var(--transition-fast);
+}
+
+.transition-colors {
+    transition: color, background-color, border-color var(--transition-normal);
+}
+
+.transition-shadow {
+    transition: box-shadow var(--transition-normal);
+}
+
+.transition-transform {
+    transition: transform var(--transition-normal);
+}
+
+.ease-in-out {
+    transition-timing-function: ease-in-out;
+}
+
+/**
+ * Transform Scale Utilities (for hover effects)
+ */
+.scale-105 {
+    transform: scale(1.05);
+}
+
+/**
+ * Cursor Utilities
+ */
+.cursor-pointer {
+    cursor: pointer;
+}
+
+/**
+ * Whitespace Utilities
+ */
+.whitespace-nowrap {
+    white-space: nowrap;
+}
+
+/**
+ * Text Align Utilities
+ */
+.text-center {
+    text-align: center;
+}
+
+.text-left {
+    text-align: left;
+}
+
+.text-right {
+    text-align: right;
+}
+
+/**
+ * Order Utilities (for flexbox ordering)
+ */
+.order-1 {
+    order: 1;
+}
+
+.order-2 {
+    order: 2;
+}
+
+/**
+ * Flex Basis Utilities
+ */
+.flex-1 {
+    flex: 1 1 0%;
+}
+
+.flex-0 {
+    flex: 0 0 auto;
+}
+
+.flex-auto {
+    flex: 1 1 auto;
+}
+
+/**
+ * Min Width Utilities
+ */
+.min-w-0 {
+    min-width: 0;
+}
+
+.min-w-xs {
+    min-width: 310px;
+}
+
+/**
+ * Object Fit Utilities
+ */
+.object-cover {
+    object-fit: cover;
+}
+
+/**
+ * Pointer Events Utilities
+ */
+.pointer-events-none {
+    pointer-events: none;
+}
+
+.pointer-events-auto {
+    pointer-events: auto;
+}

@@ -1,0 +1,183 @@
+/**
+ * Fidelity Typography Styles
+ * Typography configuration based on original style.css
+ */
+
+@import "./variables.css";
+
+/**
+ * Font Family
+ */
+.font-family-sans {
+    font-family: var(--font-family-sans);
+}
+
+/**
+ * Font Sizes
+ */
+.text-fidelity-xs {
+    font-size: var(--font-size-xs);
+}
+
+.text-fidelity-sm {
+    font-size: var(--font-size-sm);
+}
+
+.text-fidelity-base {
+    font-size: var(--font-size-base);
+}
+
+.text-fidelity-lg {
+    font-size: var(--font-size-lg);
+}
+
+.text-fidelity-xl {
+    font-size: var(--font-size-xl);
+}
+
+.text-fidelity-2xl {
+    font-size: var(--font-size-2xl);
+}
+
+.text-fidelity-3xl {
+    font-size: var(--font-size-3xl);
+}
+
+.text-fidelity-4xl {
+    font-size: var(--font-size-4xl);
+}
+
+.text-fidelity-5xl {
+    font-size: var(--font-size-5xl);
+}
+
+.text-fidelity-6xl {
+    font-size: var(--font-size-6xl);
+}
+
+.text-fidelity-7xl {
+    font-size: var(--font-size-7xl);
+}
+
+/**
+ * Line Heights
+ */
+.leading-tight {
+    line-height: var(--line-height-tight);
+}
+
+.leading-normal {
+    line-height: var(--line-height-normal);
+}
+
+.leading-relaxed {
+    line-height: var(--line-height-relaxed);
+}
+
+.leading-loose {
+    line-height: var(--line-height-loose);
+}
+
+/**
+ * Font Weights
+ */
+.font-light {
+    font-weight: 300;
+}
+
+.font-normal {
+    font-weight: 400;
+}
+
+.font-medium {
+    font-weight: 500;
+}
+
+.font-semibold {
+    font-weight: 600;
+}
+
+.font-bold {
+    font-weight: 700;
+}
+
+/**
+ * Text Colors
+ */
+.text-fidelity-black {
+    color: var(--fidelity-black);
+}
+
+.text-fidelity-dark-gray {
+    color: var(--fidelity-dark-gray);
+}
+
+.text-fidelity-medium-gray {
+    color: var(--fidelity-medium-gray);
+}
+
+.text-fidelity-light-gray {
+    color: var(--fidelity-light-gray);
+}
+
+.text-fidelity-green {
+    color: var(--fidelity-green);
+}
+
+.text-fidelity-dark-green {
+    color: var(--fidelity-dark-green);
+}
+
+.text-fidelity-blue {
+    color: var(--fidelity-blue);
+}
+
+.text-fidelity-dark-blue {
+    color: var(--fidelity-dark-blue);
+}
+
+.text-fidelity-orange {
+    color: var(--fidelity-orange);
+}
+
+.text-fidelity-red {
+    color: var(--fidelity-red);
+}
+
+/**
+ * Letter Spacing
+ */
+.tracking-tight {
+    letter-spacing: -0.5px;
+}
+
+.tracking-normal {
+    letter-spacing: 0;
+}
+
+/**
+ * Text Decoration
+ */
+.underline {
+    text-decoration: underline;
+}
+
+.underline-offset-2 {
+    text-decoration-thickness: 1px;
+    text-underline-offset: 2px;
+}
+
+.underline-offset-4 {
+    text-decoration-thickness: 1px;
+    text-underline-offset: 4px;
+}
+
+.underline-offset-6 {
+    text-decoration-thickness: 1px;
+    text-underline-offset: 6px;
+}
+
+.underline-offset-10 {
+    text-decoration-thickness: 1px;
+    text-underline-offset: 10px;
+}
