@@ -1,6 +1,7 @@
 /**
  * NavItem Component
  * Renders an individual navigation item with optional dropdown
+ * Uses legacy CSS classes for exact UI replication
  */
 
 'use client';
@@ -9,7 +10,6 @@ import React from 'react';
 import Link from 'next/link';
 import type { NavSection } from '@/types/navigation';
 import { Dropdown } from './Dropdown';
-import styles from './Navigation.module.css';
 
 export interface NavItemProps {
     /** Navigation section data */
@@ -26,49 +26,46 @@ export function NavItem({
     section,
     isSimpleLink = false
 }: NavItemProps): React.ReactElement {
-    // Determine if dropdown should be wide (for certain sections)
-    const isWideDropdown =
-        section.id === 'planning-advice' ||
-        section.id === 'products' ||
-        section.id === 'why-fidelity';
-
-    const dropdownClasses = isWideDropdown ? styles.dropdownWide : '';
+    // Determine specific dropdown classes based on section ID
+    let dropdownClasses = 'dropdown';
+    
+    if (section.id === 'planning-advice') {
+        dropdownClasses += ' dropdown--planning';
+    } else if (section.id === 'products') {
+        dropdownClasses += ' dropdown--products';
+    }
 
     if (isSimpleLink || section.type === 'link') {
         return (
-            <li className={styles.navItem}>
+            <div className="nav-item">
                 <Link
                     href={section.href ?? '#'}
-                    className={styles.navTrigger}
+                    className="nav-trigger"
                     aria-label={section.ariaLabel}
                 >
                     {section.label}
                 </Link>
-            </li>
+            </div>
         );
     }
 
     return (
-        <li className={styles.navItem}>
+        <div className="nav-item">
             <button
                 type="button"
-                className={styles.navTrigger}
-                aria-haspopup="true"
+                className="nav-trigger"
                 aria-expanded="false"
                 aria-label={section.ariaLabel}
             >
                 {section.label}
-                <span className={styles.navTriggerIcon}>
-                    <i className="fas fa-chevron-down" aria-hidden="true" />
-                </span>
             </button>
-            {section.links && section.links.length > 0 && (
+            {(section.links || section.submenus) && (
                 <Dropdown
-                    links={section.links}
+                    links={section.links || []}
                     submenus={section.submenus}
                     className={dropdownClasses}
                 />
             )}
-        </li>
+        </div>
     );
 }

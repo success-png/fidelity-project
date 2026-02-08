@@ -3,7 +3,7 @@
  * Reusable input component for forms and search
  */
 
-import React from 'react';
+import React, { useId } from 'react';
 import styles from './Input.module.css';
 
 export type InputSize = 'md' | 'sm' | 'lg';
@@ -37,7 +37,8 @@ export function Input({
     id,
     ...props
 }: InputProps): React.ReactElement {
-    const inputId = id || `input-${Math.random().toString(36).substr(2, 9)}`;
+    const generatedId = useId();
+    const inputId = id || generatedId;
     const hasError = Boolean(error);
 
     const wrapperClassNames = [
@@ -110,7 +111,8 @@ export function Textarea({
     id,
     ...props
 }: TextareaProps): React.ReactElement {
-    const textareaId = id || `textarea-${Math.random().toString(36).substr(2, 9)}`;
+    const generatedId = useId();
+    const textareaId = id || generatedId;
     const hasError = Boolean(error);
 
     const wrapperClassNames = [

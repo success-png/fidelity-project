@@ -1,13 +1,12 @@
 /**
  * Header Component
  * Main header with green top bar and white navigation bar
- * Contains Navigation component (placeholder until implemented)
+ * Uses legacy CSS classes for exact UI replication
  */
 
 import React from 'react';
-import { Container } from '@/components/ui/Container/Container';
 import { TopBar } from './TopBar';
-import styles from './Header.module.css';
+import { Navigation } from '../Navigation/Navigation';
 
 export interface HeaderProps {
     /** Optional additional CSS class */
@@ -24,22 +23,16 @@ export function Header({
     showNavigation = true,
 }: HeaderProps): React.ReactElement {
     return (
-        <header className={`${styles.header} ${className}`}>
+        <header className={`site-header ${className}`}>
             {/* Green Top Bar */}
             <TopBar isAuthenticated={isAuthenticated} />
 
-            {/* White Navigation Bar - Placeholder for Navigation component */}
+            {/* White Navigation Bar */}
             {showNavigation && (
-                <div className={styles.whiteBar}>
-                    <Container className={styles.whiteBarInner}>
-                        {/* Navigation will be rendered here in the Navigation component task */}
-                        <nav aria-label="Main navigation">
-                            {/* Placeholder - Navigation component will be added in separate task */}
-                            <div style={{ width: '100%' }}>
-                                {/* Navigation component placeholder */}
-                            </div>
-                        </nav>
-                    </Container>
+                <div className="header-white">
+                    <div className="container header-white-inner">
+                        <Navigation />
+                    </div>
                 </div>
             )}
         </header>

@@ -1,13 +1,12 @@
 /**
  * TopBar Component
  * Green top bar with brand logo, utility links, and CTA buttons
+ * Uses legacy CSS classes for exact UI replication
  */
 
 import React from 'react';
 import Link from 'next/link';
 import { SECONDARY_NAV } from '@/config/navigation';
-import { Container } from '@/components/ui/Container/Container';
-import styles from './Header.module.css';
 
 /**
  * Filter utility links (non-CTA links)
@@ -43,69 +42,25 @@ export function TopBar({ className = '', isAuthenticated = false }: TopBarProps)
     const authenticatedLink = SECONDARY_NAV.find((link) => link.id === 'profile');
 
     return (
-        <div className={`${styles.greenBar} ${className}`}>
-            <Container className={styles.greenBarInner}>
+        <div className={`header-green ${className}`}>
+            <div className="container header-green-inner">
                 {/* Brand Logo */}
-                <Link href="/" className={styles.brand} aria-label="Fidelity Investments - Home">
-                    <svg
-                        className={styles.brandLogo}
-                        viewBox="0 0 120 28"
-                        fill="none"
-                        xmlns="http://www.w3.org/2000/svg"
-                        aria-hidden="true"
-                    >
-                        {/* Fidelity Logo SVG - White version */}
-                        <path
-                            d="M10.5 0H0V28H10.5V0Z"
-                            fill="white"
-                        />
-                        <path
-                            d="M24.5 0H14V28H24.5V0Z"
-                            fill="white"
-                        />
-                        <path
-                            d="M38.5 0H28V28H38.5V0Z"
-                            fill="white"
-                        />
-                        <path
-                            d="M52.5 0H42V28H52.5V0Z"
-                            fill="white"
-                        />
-                        <path
-                            d="M66.5 0H56V28H66.5V0Z"
-                            fill="white"
-                        />
-                        <path
-                            d="M80.5 0H70V28H80.5V0Z"
-                            fill="white"
-                        />
-                        <path
-                            d="M94.5 0H84V28H94.5V0Z"
-                            fill="white"
-                        />
-                        <path
-                            d="M108.5 0H98V28H108.5V0Z"
-                            fill="white"
-                        />
-                        <path
-                            d="M120 14H112V22H120V14Z"
-                            fill="white"
-                        />
-                        <path
-                            d="M120 6H112V10H120V6Z"
-                            fill="white"
-                        />
-                    </svg>
+                <Link href="/" className="brand" aria-label="Fidelity Investments - Home">
+                    <img 
+                        src="https://www.fidelity.com/static/fidelity-rebrand/fidelity-2.0/images/fidelity-logo.svg" 
+                        alt="Fidelity" 
+                        className="brand-logo"
+                    />
                 </Link>
 
                 {/* Utility Links and CTA Buttons */}
-                <div className={styles.links}>
+                <div className="header-links">
                     {/* Utility Links (Customer Service, Fidelity Assistant, etc.) */}
                     {utilityLinks.map((link) => (
                         <Link
                             key={link.id}
                             href={link.href}
-                            className={styles.link}
+                            className="header-link"
                             aria-label={link.ariaLabel}
                         >
                             {link.label}
@@ -116,7 +71,7 @@ export function TopBar({ className = '', isAuthenticated = false }: TopBarProps)
                     {isAuthenticated && authenticatedLink && (
                         <Link
                             href={authenticatedLink.href}
-                            className={styles.link}
+                            className="header-link"
                             aria-label={authenticatedLink.ariaLabel}
                         >
                             {authenticatedLink.label}
@@ -126,13 +81,13 @@ export function TopBar({ className = '', isAuthenticated = false }: TopBarProps)
                     {/* CTA Buttons */}
                     {ctaButtons.map((button) => {
                         const isOpenAccount = button.id === 'open-account';
-                        const buttonStyles = isOpenAccount ? styles.buttonLight : styles.buttonOutline;
+                        const buttonClass = isOpenAccount ? 'header-btn--light' : 'header-btn--outline';
 
                         return (
                             <Link
                                 key={button.id}
                                 href={button.href}
-                                className={`${styles.button} ${buttonStyles}`}
+                                className={`header-btn ${buttonClass}`}
                                 aria-label={button.ariaLabel}
                             >
                                 {button.label}
@@ -140,7 +95,7 @@ export function TopBar({ className = '', isAuthenticated = false }: TopBarProps)
                         );
                     })}
                 </div>
-            </Container>
+            </div>
         </div>
     );
 }

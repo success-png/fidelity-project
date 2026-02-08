@@ -1,6 +1,7 @@
 /**
  * Navigation Component
- * Main navigation bar with dropdown menus and mobile menu support
+ * Main navigation bar with dropdown menus and mobile responsive design
+ * Uses legacy CSS classes for exact UI replication
  */
 
 'use client';
@@ -10,7 +11,6 @@ import { MAIN_NAV } from '@/config/navigation';
 import type { NavSection } from '@/types/navigation';
 import { NavItem } from './NavItem';
 import { MobileMenu } from './MobileMenu';
-import styles from './Navigation.module.css';
 
 export interface NavigationProps {
     /** Optional additional CSS class */
@@ -27,15 +27,13 @@ export interface NavigationProps {
  */
 function SearchInput(): React.ReactElement {
     return (
-        <div className={styles.search}>
-            <span className={styles.searchIcon}>
-                <i className="fas fa-search" aria-hidden="true" />
-            </span>
+        <div className="search">
+            <i className="fas fa-search search-icon" aria-hidden="true" />
             <input
                 type="search"
-                className={styles.searchInput}
-                placeholder="Search"
-                aria-label="Search Fidelity"
+                className="search-input"
+                placeholder="How can we help?"
+                aria-label="Search"
             />
         </div>
     );
@@ -56,33 +54,27 @@ export function Navigation({
         setIsMobileMenuOpen((prev) => !prev);
     }, []);
 
-    const closeMobileMenu = useCallback(() => {
-        setIsMobileMenuOpen(false);
-    }, []);
-
     return (
-        <nav
-            className={`${styles.nav} ${className}`}
-            aria-label="Main navigation"
-        >
-            {/* Desktop Navigation Links */}
-            <ul className={styles.navList}>
+        <>
+            <nav
+                className={`nav-links ${className}`}
+                id="mainNav"
+                aria-label="Primary"
+            >
                 {sections.map((section) => (
                     <NavItem key={section.id} section={section} />
                 ))}
-            </ul>
+            </nav>
 
-            {/* Right Section: Search */}
-            <div className={styles.navRight}>
+            <div className="nav-right">
                 {showSearch && <SearchInput />}
 
-                {/* Mobile Menu Toggle & Panel */}
                 <MobileMenu
                     sections={sections}
                     isOpen={isMobileMenuOpen}
                     onToggle={toggleMobileMenu}
                 />
             </div>
-        </nav>
+        </>
     );
 }
