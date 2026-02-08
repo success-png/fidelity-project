@@ -5,8 +5,6 @@
  */
 
 import type { Metadata } from "next";
-import { Header } from "@/components/layout/Header/Header";
-import { Footer } from "@/components/layout/Footer/Footer";
 
 export const metadata: Metadata = {
     title: "Open an Account - Fidelity Investments",
@@ -16,8 +14,6 @@ export const metadata: Metadata = {
 export default function OpenAccountPage() {
     return (
         <>
-            <Header />
-
             <main>
                 {/* Hero Section */}
                 <section className="hero" style={{ backgroundImage: "url('/images/img1.PNG')" }}>
@@ -192,8 +188,6 @@ export default function OpenAccountPage() {
                     </div>
                 </section>
             </main>
-
-            <Footer />
         </>
     );
 }
