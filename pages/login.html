@@ -1,10 +1,11 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Log in</title>
+  <link rel="icon" type="image/png" href="../img/logo.svg"><title>Log in</title>
   <link rel="stylesheet" href="../style.css">
+  <link rel="stylesheet" href="../css/forms.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 </head>
@@ -13,7 +14,7 @@
   <div class="header-green">
     <div class="container header-green-inner">
       <a class="brand" href="../index.html" aria-label="Fidelity">
-        <img class="brand-logo" src="https://www.fidelity.com/static/fidelity-rebrand/fidelity-2.0/images/fidelity-logo.svg" alt="Fidelity">
+        <img class="brand-logo" src="../img/logo.svg" alt="Fidelity">
       </a>
 
       <div class="header-links">
@@ -183,12 +184,38 @@
 
   <section class="page-content">
     <div class="container">
-      <p>This is a placeholder page for <strong>Log in</strong>. Replace this content when you build this page.</p>
-      <p><a href="../index.html">Back to Home</a></p>
+      <div class="auth-form-container">
+        <form class="auth-form" action="#" method="POST">
+          <h2 class="auth-title">Log in to your account</h2>
+          
+          <div class="form-group">
+            <label for="username">Username or Email</label>
+            <input type="text" id="username" name="username" class="form-input" placeholder="Enter your username or email" required>
+          </div>
+          
+          <div class="form-group">
+            <label for="password">Password</label>
+            <input type="password" id="password" name="password" class="form-input" placeholder="Enter your password" required>
+          </div>
+          
+          <button type="submit" class="btn btn-primary btn-block">Log in</button>
+          
+          <div class="auth-links">
+            <a href="#" class="auth-link">Forgot username or password?</a>
+          </div>
+          
+          <div class="auth-divider">
+            <span>New to Fidelity?</span>
+          </div>
+          
+          <a href="open-account.html" class="btn btn-secondary btn-block">Register for an account</a>
+        </form>
+      </div>
     </div>
   </section>
 </main>
 
-<script src="../style.js"></script>
+<script src="../js/api.js"></script>
+  <script src="../style.js"></script>
 </body>
 </html>

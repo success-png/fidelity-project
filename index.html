@@ -3,17 +3,117 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Fidelity Investments - Retirement Plans, Investing, Brokerage, Wealth Management, Financial Planning and Advice, Online Trading</title>
+    <link rel="icon" type="image/svg+xml" href="img/logo.svg">
+    <title>Fidelity Investment - Retirement Plans, Investing, Brokerage, Wealth Management, Financial Planning and Advice, Online Trading</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 </head>
 <body>
     <header class="site-header">
-        <div class="header-green">
+        <!-- Mobile Header (hamburger + logo + log in) -->
+        <div class="mobile-header">
+            <button class="mobile-hamburger" type="button" aria-label="Toggle menu" aria-expanded="false">
+                <span class="hamburger-line"></span>
+                <span class="hamburger-line"></span>
+                <span class="hamburger-line"></span>
+            </button>
+            <a class="mobile-logo" href="index.html" aria-label="Fidelity">
+                <img class="mobile-logo-img" src="img/logo.svg" alt="Fidelity Investment">
+            </a>
+            <a class="mobile-login-btn" href="pages/login.html">Log in</a>
+        </div>
+
+        <!-- Mobile Menu Overlay -->
+        <div class="mobile-menu-overlay">
+            <div class="mobile-menu-header">
+                <button class="mobile-menu-close" type="button" aria-label="Close menu">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <nav class="mobile-menu-nav" aria-label="Mobile navigation">
+                <div class="mobile-nav-item">
+                    <a class="mobile-nav-link" href="pages/customer-service.html">Customer Service</a>
+                </div>
+                <div class="mobile-nav-item">
+                    <a class="mobile-nav-link" href="pages/fidelity-assistant.html">Fidelity Assistant</a>
+                </div>
+                <div class="mobile-nav-item">
+                    <a class="mobile-nav-link" href="pages/open-account.html">Open an account</a>
+                </div>
+                <div class="mobile-nav-divider"></div>
+                <div class="mobile-nav-item">
+                    <button class="mobile-nav-trigger" type="button" aria-expanded="false">
+                        Accounts & Trade
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                    <div class="mobile-submenu">
+                        <a class="mobile-submenu-link" href="pages/portfolio.html">Portfolio</a>
+                        <a class="mobile-submenu-link" href="pages/account-positions.html">Account Positions</a>
+                        <a class="mobile-submenu-link" href="pages/trade.html">Trade</a>
+                        <a class="mobile-submenu-link" href="pages/transfers.html">Transfers</a>
+                        <a class="mobile-submenu-link" href="pages/cash-management.html">Cash Management</a>
+                        <a class="mobile-submenu-link" href="pages/bill-pay.html">Bill Pay</a>
+                    </div>
+                </div>
+                <div class="mobile-nav-item">
+                    <button class="mobile-nav-trigger" type="button" aria-expanded="false">
+                        Planning & Advice
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                    <div class="mobile-submenu">
+                        <a class="mobile-submenu-link" href="pages/what-we-offer.html">What We Offer</a>
+                        <a class="mobile-submenu-link" href="pages/build-your-free-plan.html">Build Your Free Plan</a>
+                        <a class="mobile-submenu-link" href="pages/financial-basics.html">Financial Basics</a>
+                        <a class="mobile-submenu-link" href="pages/building-savings.html">Building Savings</a>
+                    </div>
+                </div>
+                <div class="mobile-nav-item">
+                    <button class="mobile-nav-trigger" type="button" aria-expanded="false">
+                        News & Research
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                    <div class="mobile-submenu">
+                        <a class="mobile-submenu-link" href="pages/news.html">News</a>
+                        <a class="mobile-submenu-link" href="pages/wealth-management-insights.html">Wealth Management Insights</a>
+                        <a class="mobile-submenu-link" href="pages/stocks-etfs-crypto.html">Stocks, ETFs, Crypto</a>
+                        <a class="mobile-submenu-link" href="pages/mutual-funds.html">Mutual Funds</a>
+                    </div>
+                </div>
+                <div class="mobile-nav-item">
+                    <button class="mobile-nav-trigger" type="button" aria-expanded="false">
+                        Products
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                    <div class="mobile-submenu">
+                        <a class="mobile-submenu-link" href="pages/retirement-iras.html">Retirement & IRAs</a>
+                        <a class="mobile-submenu-link" href="pages/spending-saving.html">Spending & Saving</a>
+                        <a class="mobile-submenu-link" href="pages/investing-trading.html">Investing & Trading</a>
+                        <a class="mobile-submenu-link" href="pages/crypto.html">Crypto</a>
+                        <a class="mobile-submenu-link" href="pages/fixed-income-bonds-cds.html">Fixed Income, Bonds & CDs</a>
+                        <a class="mobile-submenu-link" href="pages/annuities.html">Annuities</a>
+                    </div>
+                </div>
+                <div class="mobile-nav-item">
+                    <button class="mobile-nav-trigger" type="button" aria-expanded="false">
+                        Why Fidelity
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                    <div class="mobile-submenu">
+                        <a class="mobile-submenu-link" href="pages/fidelity-advantage.html">The Fidelity Advantage</a>
+                        <a class="mobile-submenu-link" href="pages/planning-advice.html">Planning & Advice</a>
+                        <a class="mobile-submenu-link" href="pages/straightforward-pricing.html">Straightforward Pricing</a>
+                        <a class="mobile-submenu-link" href="pages/about-fidelity.html">About Fidelity</a>
+                    </div>
+                </div>
+            </nav>
+        </div>
+
+        <!-- Desktop Header -->
+        <div class="header-green desktop-header">
             <div class="container header-green-inner">
                 <a class="brand" href="index.html" aria-label="Fidelity">
-                    <img class="brand-logo" src="https://www.fidelity.com/static/fidelity-rebrand/fidelity-2.0/images/fidelity-logo.svg" alt="Fidelity">
+                    <img class="brand-logo" src="img/logo.svg" alt="Fidelity Investment">
                 </a>
 
                 <div class="header-links">
@@ -22,11 +122,13 @@
                     <a class="header-link" href="pages/profile.html">Profile</a>
                     <a class="header-btn header-btn--light" href="pages/open-account.html">Open an account</a>
                     <a class="header-btn header-btn--outline" href="pages/login.html">Log in</a>
+                    <a class="header-btn header-btn--outline" id="logoutBtn" href="#" style="display: none;">Log out</a>
+                    <span class="user-display-name" id="userDisplayName" style="display: none; color: #fff; font-size: 13px; font-weight: 600;"></span>
                 </div>
             </div>
         </div>
 
-        <div class="header-white">
+        <div class="header-white desktop-header">
             <div class="container header-white-inner">
                 <nav class="nav-links" id="mainNav" aria-label="Primary">
                     <div class="nav-item">
@@ -318,80 +420,198 @@
         </section>
 
         <section class="quick-links-section">
-            <div class="quick-links-content" style="display: flex !important; gap: 0px !important; max-width: 1200px !important; margin: 0 auto !important; padding: 0 20px !important;">
-                <div class="quick-links-column" style="flex: 1 !important; display: flex !important; flex-direction: column !important; gap: 12px !important; padding: 0 20px 0 0 !important;">
-                    <a href="#" class="quick-link" style="font-size: 14px !important;">Mutual Funds</a>
-                    <a href="#" class="quick-link" style="font-size: 14px !important;">ETFs</a>
-                    <a href="#" class="quick-link" style="font-size: 14px !important;">Fixed Income</a>
-                    <a href="#" class="quick-link" style="font-size: 14px !important;">Bonds</a>
-                    <a href="#" class="quick-link" style="font-size: 14px !important;">CDs</a>
-                    <a href="#" class="quick-link" style="font-size: 14px !important;">Options</a>
-                    <a href="#" class="quick-link" style="font-size: 14px !important;">Crypto</a>
-                    <a href="#" class="quick-link" style="font-size: 14px !important;">Fidelity Trader+</a>
-                    <a href="#" class="quick-link" style="font-size: 14px !important;">Investor Centers</a>
+            <div class="quick-links-content">
+                <div class="quick-links-column">
+                    <a href="#" class="quick-link">Mutual Funds</a>
+                    <a href="#" class="quick-link">ETFs</a>
+                    <a href="#" class="quick-link">Fixed Income</a>
+                    <a href="#" class="quick-link">Bonds</a>
+                    <a href="#" class="quick-link">CDs</a>
+                    <a href="#" class="quick-link">Options</a>
+                    <a href="#" class="quick-link">Crypto</a>
+                    <a href="#" class="quick-link">Fidelity Trader+</a>
+                    <a href="#" class="quick-link">Investor Centers</a>
                 </div>
-                <div class="quick-links-column" style="flex: 1 !important; display: flex !important; flex-direction: column !important; gap: 12px !important; padding: 0 10px !important;">
-                    <a href="#" class="quick-link" style="font-size: 14px !important;">Stocks</a>
-                    <a href="#" class="quick-link" style="font-size: 14px !important;">Online Trading</a>
-                    <a href="#" class="quick-link" style="font-size: 14px !important;">Direct Indexing</a>
-                    <a href="#" class="quick-link" style="font-size: 14px !important;">Sustainable Investing</a>
-                    <a href="#" class="quick-link" style="font-size: 14px !important;">Annuities</a>
-                    <a href="#" class="quick-link" style="font-size: 14px !important;">Life Insurance</a>
-                    <a href="#" class="quick-link" style="font-size: 14px !important;">Long-Term Care Planning</a>
-                    <a href="#" class="quick-link" style="font-size: 14px !important;">529 Plans</a>
-                    <a href="#" class="quick-link" style="font-size: 14px !important;">Health Savings Account</a>
+                <div class="quick-links-column">
+                    <a href="#" class="quick-link">Stocks</a>
+                    <a href="#" class="quick-link">Online Trading</a>
+                    <a href="#" class="quick-link">Direct Indexing</a>
+                    <a href="#" class="quick-link">Sustainable Investing</a>
+                    <a href="#" class="quick-link">Annuities</a>
+                    <a href="#" class="quick-link">Life Insurance</a>
+                    <a href="#" class="quick-link">Long-Term Care Planning</a>
+                    <a href="#" class="quick-link">529 Plans</a>
+                    <a href="#" class="quick-link">Health Savings Account</a>
                 </div>
-                <div class="quick-links-divider" style="width: 1px !important; background: #000 !important;"></div>
-                <div class="quick-links-column" style="flex: 1 !important; display: flex !important; flex-direction: column !important; gap: 12px !important; padding: 0 0 0 20px !important;">
-                    <a href="#" class="quick-link" style="font-size: 14px !important;">IRAs</a>
-                    <a href="#" class="quick-link" style="font-size: 14px !important;">Retirement Planning</a>
-                    <a href="#" class="quick-link" style="font-size: 14px !important;">Small Business Retirement Plans</a>
-                    <a href="#" class="quick-link" style="font-size: 14px !important;">Charitable Giving</a>
-                    <a href="#" class="quick-link" style="font-size: 14px !important;">Marketplace Solutions</a>
-                    <a href="#" class="quick-link" style="font-size: 14px !important;">FINRA's BrokerCheck</a>
-                    <a href="#" class="quick-link" style="font-size: 14px !important;">Why Fidelity</a>
+                <div class="quick-links-column">
+                    <a href="#" class="quick-link">IRAs</a>
+                    <a href="#" class="quick-link">Retirement Planning</a>
+                    <a href="#" class="quick-link">Small Business Retirement Plans</a>
+                    <a href="#" class="quick-link">Charitable Giving</a>
+                    <a href="#" class="quick-link">Marketplace Solutions</a>
+                    <a href="#" class="quick-link">FINRA's BrokerCheck</a>
+                    <a href="#" class="quick-link">Why Fidelity</a>
                     <!-- Right side content - empty for now -->
+                </div>
+                <div class="quick-links-divider"></div>
+                
+                <!-- Stay Connected Section -->
+                <div class="stay-connected-section">
+                    <h3 class="stay-connected-title">Stay Connected</h3>
+                    
+                    <div class="search-section">
+                        <label class="search-label">Locate an Investor Center by ZIP Code</label>
+                        <div class="search-container">
+                            <input type="text" class="search-input" placeholder="Enter ZIP Code">
+                            <button class="search-button">Search</button>
+                        </div>
+                    </div>
+                    
+                    <div class="social-links">
+                        <div class="social-links-row">
+                            <a href="https://www.instagram.com/fidelity" target="_blank" class="social-link">
+                                <i class="fab fa-instagram"></i>
+                                <span>Instagram</span>
+                            </a>
+                            <a href="https://www.linkedin.com/company/fidelity-investments" target="_blank" class="social-link">
+                                <i class="fab fa-linkedin"></i>
+                                <span>LinkedIn</span>
+                            </a>
+                            <a href="https://www.youtube.com/fidelity" target="_blank" class="social-link">
+                                <i class="fab fa-youtube"></i>
+                                <span>YouTube</span>
+                            </a>
+                            <a href="https://www.reddit.com/r/fidelity" target="_blank" class="social-link">
+                                <i class="fab fa-reddit"></i>
+                                <span>Reddit</span>
+                            </a>
+                            <a href="https://twitter.com/fidelity" target="_blank" class="social-link">
+                                <i class="fab fa-x-twitter"></i>
+                                <span>X (Twitter)</span>
+                            </a>
+                        </div>
+                        <div class="social-links-row">
+                            <a href="https://www.facebook.com/fidelityinvestments" target="_blank" class="social-link">
+                                <i class="fab fa-facebook"></i>
+                                <span>Facebook</span>
+                            </a>
+                            <a href="https://www.tiktok.com/@fidelity" target="_blank" class="social-link">
+                                <i class="fab fa-tiktok"></i>
+                                <span>TikTok</span>
+                            </a>
+                            <a href="https://discord.gg/fidelity" target="_blank" class="social-link">
+                                <i class="fab fa-discord"></i>
+                                <span>Discord</span>
+                            </a>
+                            <a href="#" class="social-link">
+                                <i class="fas fa-mobile-alt"></i>
+                                <span>Fidelity Apps</span>
+                            </a>
+                            <a href="#" class="social-link">
+                                <i class="fas fa-user-friends"></i>
+                                <span>Refer a Friend</span>
+                            </a>
+                        </div>
+                    </div>
+                    
+                    <!-- Footer Links -->
+                    <div class="footer-links">
+                        <div class="footer-links-row">
+                            <a href="#" class="footer-link">Copyright 1998-2026 FMR LLC. All Rights Reserved.</a>
+                        </div>
+                        <div class="footer-links-row">
+                            <a href="#" class="footer-link">Terms of Use</a>
+                            <a href="#" class="footer-link">Privacy</a>
+                            <a href="#" class="footer-link">Security</a>
+                            <a href="#" class="footer-link">Site Map</a>
+                            <a href="#" class="footer-link">Accessibility</a>
+                            <a href="#" class="footer-link">Contact Us</a>
+                            <a href="#" class="footer-link">Share Your Screen</a>
+                        </div>
+                        <div class="footer-links-row">
+                            <a href="#" class="footer-link">Disclosures</a>
+                            <a href="#" class="footer-link">Manage My Targeting/Advertising Cookies</a>
+                            <span class="footer-note">This is for persons in the US only.</span>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
     </main>
 
-    <footer class="main-footer">
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-section">
-                    <h4>About Fidelity</h4>
-                    <ul>
-                        <li><a href="pages/why-fidelity.html">Why Fidelity</a></li>
-                        <li><a href="pages/pricing.html">Pricing</a></li>
-                        <li><a href="pages/viewpoints.html">Viewpoints</a></li>
-                        <li><a href="pages/research.html">Research</a></li>
-                    </ul>
-                </div>
-                <div class="footer-section">
-                    <h4>Customer Service</h4>
-                    <ul>
-                        <li><a href="pages/contact-us.html">Contact Us</a></li>
-                        <li><a href="pages/help-center.html">Help Center</a></li>
-                        <li><a href="pages/fidelity-locations.html">Fidelity Locations</a></li>
-                    </ul>
-                </div>
-                <div class="footer-section">
-                    <h4>Legal</h4>
-                    <ul>
-                        <li><a href="pages/privacy.html">Privacy</a></li>
-                        <li><a href="pages/security.html">Security</a></li>
-                        <li><a href="pages/disclosures.html">Disclosures</a></li>
-                    </ul>
-                </div>
-            </div>
-
-            <div class="footer-bottom">
-                <p>&copy; 2024 FMR LLC. All rights reserved.</p>
-            </div>
+    <footer style="padding: 40px 20px; background: #f5f5f5; text-align: left;">
+        <p style="font-size: 12px; color: #333; font-family: 'Fidelity Sans', Arial, sans-serif; margin-bottom: 10px; line-height: 1.4;">Keep in mind that investing involves risk. The value of your investment will fluctuate over time, and you may gain or lose money.</p>
+        
+        <div style="margin-bottom: 8px;">
+            <span style="font-size: 12px; color: #333; font-weight: 600; font-family: 'Fidelity Sans', Arial, sans-serif; margin-right: 5px;">1.</span>
+            <span style="font-size: 12px; color: #333; font-family: 'Fidelity Sans', Arial, sans-serif;">$0.00 commission applies to online U.S. equity trades and exchange-traded funds (ETFs) in a Fidelity retail account only for Fidelity Brokerage Services LLC retail clients. Sell orders are subject to an activity assessment fee (historically from $0.01 to $0.03 per $1,000 of principal). Other exclusions and conditions may apply. A limited number of ETFs are subject to a transaction-based service fee of $100. See full list at Fidelity.com/commissions. Employee equity compensation transactions and accounts managed by advisors or intermediaries through Fidelity Institutional® are subject to different commission schedules.</span>
+        </div>
+        
+        <div style="margin-bottom: 8px;">
+            <span style="font-size: 12px; color: #333; font-weight: 600; font-family: 'Fidelity Sans', Arial, sans-serif; margin-right: 5px;">2.</span>
+            <span style="font-size: 12px; color: #333; font-family: 'Fidelity Sans', Arial, sans-serif;">Zero account minimums and zero account fees apply to retail brokerage accounts only. Expenses charged by investments (e.g., funds, managed accounts, and certain HSAs) and commissions, interest charges, or other expenses for transactions may still apply. See Fidelity.com/commissions for further details.</span>
+        </div>
+        
+        <div style="margin-bottom: 8px;">
+            <span style="font-size: 12px; color: #333; font-weight: 600; font-family: 'Fidelity Sans', Arial, sans-serif; margin-right: 5px;">3.</span>
+            <span style="font-size: 12px; color: #333; font-family: 'Fidelity Sans', Arial, sans-serif;">Fractional share quantities can be entered out to 3 decimal places (.001) as long as the value of the order is at least $1.00. Dollar-based trades can be entered out to 2 decimal places (e.g. $250.00).</span>
+        </div>
+        
+        <div style="margin-bottom: 8px;">
+            <span style="font-size: 12px; color: #333; font-weight: 600; font-family: 'Fidelity Sans', Arial, sans-serif; margin-right: 5px;">4.</span>
+            <span style="font-size: 12px; color: #333; font-family: 'Fidelity Sans', Arial, sans-serif;">For a distribution to be considered qualified, the 5-year aging requirement has to be satisfied, and you must be age 59½ or older or meet one of several exemptions (disability, qualified first-time home purchase, or death among them).</span>
+        </div>
+        
+        <div style="margin-bottom: 8px;">
+            <span style="font-size: 12px; color: #333; font-weight: 600; font-family: 'Fidelity Sans', Arial, sans-serif; margin-right: 5px;">5.</span>
+            <span style="font-size: 12px; color: #333; font-family: 'Fidelity Sans', Arial, sans-serif;">With respect to federal taxation only. Contributions, investment earnings, and distributions may or may not be subject to state taxation.</span>
+        </div>
+        
+        <div style="margin-bottom: 8px;">
+            <span style="font-size: 12px; color: #333; font-weight: 600; font-family: 'Fidelity Sans', Arial, sans-serif; margin-right: 5px;">6.</span>
+            <span style="font-size: 12px; color: #333; font-family: 'Fidelity Sans', Arial, sans-serif;">There are zero account fees and zero account minimums for Fidelity HSAs® offered through Fidelity.com to individuals and employers. There may be commissions, interest charges, and other expenses associated with transacting or holding specific investments (e.g., mutual funds), or selecting certain account features or types (e.g., managed accounts). When a Fidelity HSA® is offered as part of an employer's benefits package (which occurs through NetBenefits®), Fidelity charges the employer a recordkeeping fee. This is a common fee charged by HSA providers. This fee may be up to $48/year, but it could be reduced or waived depending on the HSA balance. Employers may pass this fee on to their employees. Contact the employer for more information. Accounts that have been opened through, or are serviced by, an intermediary, or in connection with your workplace benefits, may incur additional fees or restrictions. Account minimums may apply to certain investments, including the purchase of some Fidelity mutual funds that have a minimum investment requirement. If you choose to invest in mutual funds, underlying fund expenses still apply. For more information and details, see the fund's prospectus and/or www.fidelity.com/commissions.</span>
+        </div>
+        
+        <div style="margin-bottom: 8px;">
+            <span style="font-size: 12px; color: #333; font-weight: 600; font-family: 'Fidelity Sans', Arial, sans-serif; margin-right: 5px;">7.</span>
+            <span style="font-size: 12px; color: #333; font-family: 'Fidelity Sans', Arial, sans-serif;">529 distributions for qualified education expenses are generally federal income tax free. 529 assets may be used to pay for (i) qualified higher education expenses, (ii) qualified expenses for registered apprenticeship programs, (iii) up to $10,000 per taxable year per beneficiary for tuition expenses in connection with enrollment at a public, private, or religious elementary or secondary educational institution. Although such assets may come from multiple 529 accounts, the $10,000 qualified withdrawal limit will be aggregated on a per beneficiary basis. The IRS has not provided guidance to date on the methodology of allocating the $10,000 annual maximum among withdrawals from different 529 accounts, and (iv) amounts paid as principal or interest on any qualified education loan of a 529 plan designated beneficiary or a sibling of the designated beneficiary. The amount treated as a qualified expense is subject to a lifetime limit of $10,000 per individual. Although the assets may come from multiple 529 accounts, the $10,000 withdrawal limit for qualified educational loans payments will be aggregated on a per individual basis. The IRS has not provided guidance to date on the methodology of allocating the $10,000 annual maximum among withdrawals from different 529 accounts. Any earnings on distributions not used for qualified higher educational expenses or that exceed distribution limits may be taxed as ordinary income and may be subject to a 10% federal tax penalty. Some states do not conform with federal tax law. Please check with your home state to determine if it recognizes the expanded 529 benefits afforded under federal tax law, including distributions for elementary and secondary education expenses, apprenticeship programs, and student loan repayments. You may want to consult with a tax professional before investing or making distributions.</span>
+        </div>
+        
+        <div style="margin-bottom: 8px;">
+            <span style="font-size: 12px; color: #333; font-family: 'Fidelity Sans', Arial, sans-serif;">The information provided herein is general in nature. It is not intended, nor should it be construed, as legal or tax advice. Because the administration of an HSA is a taxpayer responsibility, you are strongly encouraged to consult your tax advisor before opening an HSA. You are also encouraged to review information available from the Internal Revenue Service (IRS) for taxpayers, which can be found on the IRS website at IRS.gov. You can find IRS Publication 969, Health Savings Accounts and Other Tax-Favored Health Plans, and IRS Publication 502, Medical and Dental Expenses, online, or you can call the IRS to request a copy of each at 800-829-3676.</span>
+        </div>
+        
+        <div style="margin-bottom: 8px;">
+            <span style="font-size: 12px; color: #333; font-family: 'Fidelity Sans', Arial, sans-serif;">The Fidelity Investments logo is a registered service mark of FMR LLC.</span>
+        </div>
+        
+        <div style="margin-bottom: 8px;">
+            <span style="font-size: 12px; color: #333; font-family: 'Fidelity Sans', Arial, sans-serif;">Fidelity advisors are licensed with Strategic Advisers LLC (Strategic Advisers), a registered investment adviser, and registered with Fidelity Brokerage Services LLC (FBS), a registered broker-dealer. Whether a Fidelity advisor provides advisory services through Strategic Advisers for a fee or brokerage services through FBS will depend on the products and services you choose.</span>
+        </div>
+        
+        <div style="margin-bottom: 8px;">
+            <span style="font-size: 12px; color: #333; font-family: 'Fidelity Sans', Arial, sans-serif;">Fidelity does not provide legal or tax advice. The information herein is general in nature and should not be considered legal or tax advice. Consult an attorney or tax professional regarding your specific situation.</span>
+        </div>
+        
+        <div style="margin-bottom: 8px;">
+            <span style="font-size: 12px; color: #333; font-family: 'Fidelity Sans', Arial, sans-serif;">The images, graphs, tools, and videos are for illustrative purposes only.</span>
+        </div>
+        
+        <div style="margin-bottom: 8px;">
+            <span style="font-size: 12px; color: #333; font-family: 'Fidelity Sans', Arial, sans-serif;">Fidelity Brokerage Services LLC, Member NYSE, SIPC, 900 Salem Street, Smithfield, RI 02917</span>
+        </div>
+        
+        <div style="margin-bottom: 8px;">
+            <span style="font-size: 12px; color: #333; font-family: 'Fidelity Sans', Arial, sans-serif;">782377.115.0</span>
         </div>
     </footer>
-
+    <script src="js/api.js"></script>
     <script src="style.js"></script>
 </body>
 </html>
+
+
+
+
+
+
