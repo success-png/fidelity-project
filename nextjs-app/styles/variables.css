@@ -1,0 +1,105 @@
+/**
+ * Fidelity CSS Variables
+ * Extracted from original style.css for the Fidelity brand
+ */
+
+:root {
+  /* ========================================
+     Fidelity Color Palette
+     ======================================== */
+
+  /* Primary Colors */
+  --fidelity-green: #00a94f;
+  --fidelity-dark-green: #007a3e;
+  --fidelity-light-green: #e6f4ea;
+  --fidelity-blue: #1f5a8b;
+  --fidelity-dark-blue: #0f3b5f;
+
+  /* Header Green */
+  --fidelity-header-green: #2f7d2f;
+
+  /* Neutral Colors */
+  --fidelity-black: #000000;
+  --fidelity-dark-gray: #333333;
+  --fidelity-medium-gray: #666666;
+  --fidelity-light-gray: #cccccc;
+  --fidelity-off-white: #ffffff;
+  --fidelity-white: #ffffff;
+
+  /* Accent Colors */
+  --fidelity-orange: #f68d2e;
+  --fidelity-red: #e31c3d;
+
+  /* ========================================
+     Spacing
+     ======================================== */
+  --spacing-xs: 4px;
+  --spacing-sm: 8px;
+  --spacing-md: 16px;
+  --spacing-lg: 24px;
+  --spacing-xl: 32px;
+  --spacing-2xl: 48px;
+  --spacing-3xl: 64px;
+
+  /* ========================================
+     Border Radius
+     ======================================== */
+  --border-radius-sm: 2px;
+  --border-radius-md: 4px;
+  --border-radius-lg: 8px;
+  --border-radius-xl: 12px;
+  --border-radius-full: 9999px;
+
+  /* ========================================
+     Box Shadow
+     ======================================== */
+  --box-shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+  --box-shadow-md: 0 4px 6px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.08);
+  --box-shadow-lg: 0 18px 44px rgba(0, 0, 0, 0.18);
+  --box-shadow-card: 0 4px 12px rgba(0, 0, 0, 0.1);
+
+  /* ========================================
+     Transitions
+     ======================================== */
+  --transition-fast: 0.15s ease-in-out;
+  --transition-normal: 0.3s ease-in-out;
+
+  /* ========================================
+     Typography
+     ======================================== */
+  --font-family-sans: "Fidelity Sans", Arial, sans-serif;
+
+  /* Font Sizes */
+  --font-size-xs: 12px;
+  --font-size-sm: 13px;
+  --font-size-base: 14px;
+  --font-size-lg: 15px;
+  --font-size-xl: 16px;
+  --font-size-2xl: 20px;
+  --font-size-3xl: 24px;
+  --font-size-4xl: 28px;
+  --font-size-5xl: 32px;
+  --font-size-6xl: 36px;
+  --font-size-7xl: 48px;
+
+  /* Line Heights */
+  --line-height-tight: 1.1;
+  --line-height-normal: 1.2;
+  --line-height-relaxed: 1.4;
+  --line-height-loose: 1.6;
+
+  /* ========================================
+     Layout
+     ======================================== */
+  --container-max-width: 1280px;
+  --header-height-green: 56px;
+  --header-height-white: 52px;
+  --dropdown-min-width: 320px;
+  --dropdown-max-width: 560px;
+
+  /* ========================================
+     Z-Index Scale
+     ======================================== */
+  --z-dropdown: 1200;
+  --z-sticky-header: 1000;
+}

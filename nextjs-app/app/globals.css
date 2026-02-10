@@ -1,0 +1,459 @@
+/**
+ * Fidelity Global Styles for Next.js App
+ * Main entry point for all styles
+ */
+
+@import "tailwindcss";
+@import "../styles/variables.css";
+@import "../styles/legacy.css";
+@import "../styles/globals.css";
+@import "../styles/typography.css";
+@import "../styles/utilities.css";
+
+/**
+ * Tailwind Theme Configuration with Fidelity Colors
+ */
+@theme {
+  /* Fidelity Color Palette - Primary */
+  --color-fidelity-green: var(--fidelity-green);
+  --color-fidelity-dark-green: var(--fidelity-dark-green);
+  --color-fidelity-light-green: var(--fidelity-light-green);
+  --color-fidelity-blue: var(--fidelity-blue);
+  --color-fidelity-dark-blue: var(--fidelity-dark-blue);
+  --color-fidelity-header-green: var(--fidelity-header-green);
+
+  /* Neutral Colors */
+  --color-fidelity-black: var(--fidelity-black);
+  --color-fidelity-dark-gray: var(--fidelity-dark-gray);
+  --color-fidelity-medium-gray: var(--fidelity-medium-gray);
+  --color-fidelity-light-gray: var(--fidelity-light-gray);
+  --color-fidelity-off-white: var(--fidelity-off-white);
+  --color-fidelity-white: var(--fidelity-white);
+
+  /* Accent Colors */
+  --color-fidelity-orange: var(--fidelity-orange);
+  --color-fidelity-red: var(--fidelity-red);
+
+  /* Spacing */
+  --spacing-fidelity-xs: var(--spacing-xs);
+  --spacing-fidelity-sm: var(--spacing-sm);
+  --spacing-fidelity-md: var(--spacing-md);
+  --spacing-fidelity-lg: var(--spacing-lg);
+  --spacing-fidelity-xl: var(--spacing-xl);
+  --spacing-fidelity-2xl: var(--spacing-2xl);
+  --spacing-fidelity-3xl: var(--spacing-3xl);
+
+  /* Border Radius */
+  --radius-fidelity-sm: var(--border-radius-sm);
+  --radius-fidelity-md: var(--border-radius-md);
+  --radius-fidelity-lg: var(--border-radius-lg);
+  --radius-fidelity-xl: var(--border-radius-xl);
+  --radius-fidelity-full: var(--border-radius-full);
+
+  /* Box Shadow */
+  --shadow-fidelity-sm: var(--box-shadow-sm);
+  --shadow-fidelity-md: var(--box-shadow-md);
+  --shadow-fidelity-lg: var(--box-shadow-lg);
+  --shadow-fidelity-card: var(--box-shadow-card);
+
+  /* Transitions */
+  --transition-fidelity-fast: var(--transition-fast);
+  --transition-fidelity-normal: var(--transition-normal);
+
+  /* Typography */
+  --font-family-fidelity-sans: var(--font-family-sans);
+}
+
+/**
+ * Base Reset & Defaults
+ */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: var(--font-family-sans);
+  background-color: var(--fidelity-off-white);
+  color: var(--fidelity-dark-gray);
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+}
+
+/**
+ * Typography Reset
+ */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+  font-weight: 600;
+  line-height: var(--line-height-normal);
+}
+
+p {
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+ul,
+ol {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+/**
+ * Form Elements Reset
+ */
+button {
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  font-family: inherit;
+}
+
+input,
+textarea,
+select {
+  font-family: inherit;
+  font-size: inherit;
+}
+
+input[type="search"] {
+  font-family: inherit;
+}
+
+/**
+ * Image Reset
+ */
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/**
+ * Container Utility
+ */
+.container {
+  max-width: var(--container-max-width);
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/**
+ * Sticky Header Utility
+ */
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: var(--z-sticky-header);
+}
+
+/**
+ * Hero Section Base Styles
+ */
+.hero {
+  padding: 36px 0 10px;
+  min-height: 560px;
+  display: flex;
+  align-items: center;
+  background-size: 120%;
+  background-position: center right;
+  background-repeat: no-repeat;
+}
+
+.hero .container {
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+  padding-left: 12px;
+}
+
+/**
+ * Button Base Styles
+ */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  height: 36px;
+  padding: 0 18px;
+  border-radius: var(--border-radius-full);
+  font-size: var(--font-size-sm);
+  font-weight: 700;
+  white-space: nowrap;
+  transition: all var(--transition-normal);
+}
+
+.btn-primary {
+  background: var(--fidelity-header-green);
+  color: white;
+}
+
+.btn-primary:hover {
+  background: #256625;
+}
+
+.btn-secondary {
+  background: transparent;
+  color: var(--fidelity-black);
+  border: 1.5px solid var(--fidelity-black);
+}
+
+.btn-secondary:hover {
+  background: #f2f2f2;
+}
+
+/**
+ * Header Button Styles
+ */
+.header-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  height: 32px;
+  padding: 0 14px;
+  border-radius: var(--border-radius-full);
+  font-size: var(--font-size-sm);
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+.header-btn--light {
+  background: white;
+  color: #111;
+}
+
+.header-btn--outline {
+  background: transparent;
+  color: white;
+  border: 2px solid white;
+}
+
+/**
+ * Responsive Breakpoints
+ * Matches original style.css breakpoints
+ */
+
+/* Tablet and larger (769px and up) */
+@media (min-width: 769px) {
+
+  .nav-item:hover .dropdown,
+  .nav-item:focus-within .dropdown {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+  }
+
+  .dropdown-item--submenu:hover .dropdown-submenu,
+  .dropdown-item--submenu:focus-within .dropdown-submenu {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+  }
+}
+
+/* Medium desktop (920px and below) */
+@media (max-width: 920px) {
+  .search {
+    min-width: 220px;
+  }
+}
+
+/* Tablet (768px and below) */
+@media (max-width: 768px) {
+  .header-links {
+    gap: 12px;
+  }
+
+  .hero {
+    padding: 14px 0 8px;
+    min-height: 360px;
+    background-position: center;
+  }
+
+  .hero .container {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  .hero-card {
+    width: 90%;
+    padding: 22px;
+    margin-left: 0;
+  }
+
+  .hero-title {
+    font-size: 34px;
+  }
+
+  .hero-buttons {
+    gap: 10px;
+  }
+
+  .header-link {
+    display: none;
+  }
+
+  .header-btn--light {
+    display: none;
+  }
+
+  .search {
+    display: none;
+  }
+
+  .nav-toggle {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .nav-links {
+    display: none;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 108px;
+    background: white;
+    border-bottom: 1px solid #e6e6e6;
+    flex-direction: column;
+    gap: 0;
+    padding: 10px 20px;
+  }
+
+  .nav-links.is-open {
+    display: flex;
+  }
+
+  .nav-link {
+    width: 100%;
+    padding: 12px 0;
+  }
+
+  .nav-item {
+    width: 100%;
+  }
+
+  .nav-trigger {
+    width: 100%;
+    justify-content: space-between;
+    padding: 12px 0;
+  }
+
+  .dropdown {
+    position: static;
+    min-width: 0;
+    padding: 10px 0 6px;
+    border: none;
+    box-shadow: none;
+    transform: none;
+    opacity: 1;
+    visibility: visible;
+    display: none;
+  }
+
+  .dropdown-submenu {
+    position: static;
+    left: auto;
+    top: auto;
+    min-width: 0;
+    border: none;
+    box-shadow: none;
+    border-radius: 0;
+    padding: 0;
+    opacity: 1;
+    visibility: visible;
+    transform: none;
+    display: none;
+  }
+
+  .dropdown-item--submenu.is-open .dropdown-submenu {
+    display: block;
+  }
+
+  .dropdown-subtitle {
+    padding: 10px 0 6px;
+  }
+
+  .dropdown-submenu .dropdown-link {
+    padding-left: 18px;
+    color: var(--fidelity-dark-gray);
+  }
+
+  .nav-item.is-open .dropdown {
+    display: block;
+  }
+
+  .dropdown-grid {
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
+
+  .slideshow-nav {
+    flex-wrap: wrap;
+    gap: 0;
+  }
+
+  .slideshow-btn {
+    flex: 1;
+    min-width: 0;
+    padding: 12px 8px;
+    font-size: 12px;
+    gap: 6px;
+    justify-content: center;
+  }
+
+  .slideshow-btn i {
+    font-size: 14px;
+  }
+
+  .slide {
+    grid-template-columns: 1fr;
+    gap: 20px;
+    min-height: auto;
+  }
+
+  .slide-image img {
+    height: 250px;
+  }
+
+  .slide-text h3 {
+    font-size: 24px;
+  }
+
+  .slide-text p {
+    font-size: 14px;
+  }
+}
+
+/**
+ * Dark Mode Support (optional)
+ * Disabled by default for Fidelity brand consistency
+ */
+/*
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+}
+*/

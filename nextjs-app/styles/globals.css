@@ -1,0 +1,165 @@
+/**
+ * Fidelity Global Styles
+ * Combines CSS variables with Tailwind theme configuration
+ */
+
+@import "tailwindcss";
+@import "./variables.css";
+
+/**
+ * Tailwind Theme Configuration
+ * Using Tailwind v4 @theme directive
+ */
+@theme {
+    /* Fidelity Color Palette - Primary */
+    --color-fidelity-green: var(--fidelity-green);
+    --color-fidelity-dark-green: var(--fidelity-dark-green);
+    --color-fidelity-light-green: var(--fidelity-light-green);
+    --color-fidelity-blue: var(--fidelity-blue);
+    --color-fidelity-dark-blue: var(--fidelity-dark-blue);
+    --color-fidelity-header-green: var(--fidelity-header-green);
+
+    /* Neutral Colors */
+    --color-fidelity-black: var(--fidelity-black);
+    --color-fidelity-dark-gray: var(--fidelity-dark-gray);
+    --color-fidelity-medium-gray: var(--fidelity-medium-gray);
+    --color-fidelity-light-gray: var(--fidelity-light-gray);
+    --color-fidelity-off-white: var(--fidelity-off-white);
+    --color-fidelity-white: var(--fidelity-white);
+
+    /* Accent Colors */
+    --color-fidelity-orange: var(--fidelity-orange);
+    --color-fidelity-red: var(--fidelity-red);
+
+    /* Spacing */
+    --spacing-fidelity-xs: var(--spacing-xs);
+    --spacing-fidelity-sm: var(--spacing-sm);
+    --spacing-fidelity-md: var(--spacing-md);
+    --spacing-fidelity-lg: var(--spacing-lg);
+    --spacing-fidelity-xl: var(--spacing-xl);
+    --spacing-fidelity-2xl: var(--spacing-2xl);
+    --spacing-fidelity-3xl: var(--spacing-3xl);
+
+    /* Border Radius */
+    --radius-fidelity-sm: var(--border-radius-sm);
+    --radius-fidelity-md: var(--border-radius-md);
+    --radius-fidelity-lg: var(--border-radius-lg);
+    --radius-fidelity-xl: var(--border-radius-xl);
+    --radius-fidelity-full: var(--border-radius-full);
+
+    /* Box Shadow */
+    --shadow-fidelity-sm: var(--box-shadow-sm);
+    --shadow-fidelity-md: var(--box-shadow-md);
+    --shadow-fidelity-lg: var(--box-shadow-lg);
+    --shadow-fidelity-card: var(--box-shadow-card);
+
+    /* Transitions */
+    --transition-fidelity-fast: var(--transition-fast);
+    --transition-fidelity-normal: var(--transition-normal);
+
+    /* Typography */
+    --font-family-fidelity-sans: var(--font-family-sans);
+}
+
+/**
+ * Base Reset & Defaults
+ */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    font-family: var(--font-family-sans);
+    background-color: var(--fidelity-off-white);
+    color: var(--fidelity-dark-gray);
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    overflow-x: hidden;
+}
+
+/**
+ * Typography Reset
+ */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin: 0;
+    font-weight: 600;
+    line-height: var(--line-height-normal);
+}
+
+p {
+    margin: 0;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+ul,
+ol {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+/**
+ * Form Elements Reset
+ */
+button {
+    background: none;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+    font-family: inherit;
+}
+
+input,
+textarea,
+select {
+    font-family: inherit;
+    font-size: inherit;
+}
+
+input[type="search"] {
+    font-family: inherit;
+}
+
+/**
+ * Image Reset
+ */
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+/**
+ * Container Utility
+ */
+.container {
+    max-width: var(--container-max-width);
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/**
+ * Sticky Header Utility
+ */
+.site-header {
+    position: sticky;
+    top: 0;
+    z-index: var(--z-sticky-header);
+}

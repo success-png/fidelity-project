@@ -1,0 +1,105 @@
+/**
+ * Button Styles
+ * CSS Module for Button component
+ */
+
+.button {
+    /* Base Styles */
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: var(--spacing-sm);
+    font-family: var(--font-family-sans);
+    font-weight: 500;
+    border-radius: var(--border-radius-md);
+    cursor: pointer;
+    transition: all var(--transition-fast);
+    border: 2px solid transparent;
+    white-space: nowrap;
+}
+
+.button:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
+/* Sizes */
+.sm {
+    padding: var(--spacing-xs) var(--spacing-md);
+    font-size: var(--font-size-sm);
+    min-height: 32px;
+}
+
+.md {
+    padding: var(--spacing-sm) var(--spacing-lg);
+    font-size: var(--font-size-base);
+    min-height: 40px;
+}
+
+.lg {
+    padding: var(--spacing-md) var(--spacing-xl);
+    font-size: var(--font-size-lg);
+    min-height: 48px;
+}
+
+/* Variants */
+.primary {
+    background-color: var(--fidelity-green);
+    color: white;
+    border-color: var(--fidelity-green);
+}
+
+.primary:hover:not(:disabled) {
+    background-color: var(--fidelity-dark-green);
+    border-color: var(--fidelity-dark-green);
+}
+
+.secondary {
+    background-color: var(--fidelity-blue);
+    color: white;
+    border-color: var(--fidelity-blue);
+}
+
+.secondary:hover:not(:disabled) {
+    background-color: var(--fidelity-dark-blue);
+    border-color: var(--fidelity-dark-blue);
+}
+
+.outline {
+    background-color: transparent;
+    color: var(--fidelity-blue);
+    border-color: var(--fidelity-blue);
+}
+
+.outline:hover:not(:disabled) {
+    background-color: var(--fidelity-light-green);
+}
+
+/* Full Width */
+.fullWidth {
+    width: 100%;
+}
+
+/* Loading State */
+.loading {
+    position: relative;
+    color: transparent;
+}
+
+.spinner {
+    position: absolute;
+    font-size: 1em;
+}
+
+/* Icons */
+.iconBefore,
+.iconAfter {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.content {
+    display: flex;
+    align-items: center;
+}
