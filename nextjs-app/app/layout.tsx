@@ -15,6 +15,11 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   title: "Fidelity Investments - Retirement Plans, Investing, Brokerage, Wealth Management, Financial Planning and Advice, Online Trading",
   description: "Fidelity Investments offers a wide range of investment products, retirement plans, and financial services to help you achieve your financial goals.",
+  icons: {
+    icon: '/logo-icon.svg',
+    shortcut: '/logo-icon.svg',
+    apple: '/logo-icon.svg',
+  },
 };
 
 export default function RootLayout({

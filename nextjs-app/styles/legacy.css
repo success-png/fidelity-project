@@ -18,7 +18,7 @@
 }
 
 .header-green-inner {
-    height: 56px;
+    height: 70px;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -31,7 +31,7 @@
 }
 
 .brand-logo {
-    height: 28px;
+    height: 56px;
     width: auto;
     display: block;
 }

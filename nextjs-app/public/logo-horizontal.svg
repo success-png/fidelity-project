@@ -1,0 +1,24 @@
+<svg width="360" height="70" viewBox="0 0 360 70" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="horizontalGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#FFFFFF;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#F0F0F0;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Icon -->
+  <g transform="translate(0, 10)">
+    <circle cx="25" cy="25" r="16" fill="none" stroke="url(#horizontalGradient)" stroke-width="3"/>
+    <path d="M 18 25 L 25 18 L 32 25 M 25 18 L 25 32" stroke="url(#horizontalGradient)" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+  
+  <!-- Fidelity text -->
+  <text x="60" y="40" font-family="Inter, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="32" font-weight="900" fill="url(#horizontalGradient)">
+    Fidelity
+  </text>
+  
+  <!-- Investment text -->
+  <text x="60" y="60" font-family="Inter, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="16" font-weight="700" fill="#FFFFFF" letter-spacing="0.3">
+    INVESTMENT
+  </text>
+</svg>

@@ -47,8 +47,8 @@ export function TopBar({ className = '', isAuthenticated = false }: TopBarProps)
                 {/* Brand Logo */}
                 <Link href="/" className="brand" aria-label="Fidelity Investments - Home">
                     <img 
-                        src="https://www.fidelity.com/static/fidelity-rebrand/fidelity-2.0/images/fidelity-logo.svg" 
-                        alt="Fidelity" 
+                        src="/logo-horizontal.svg" 
+                        alt="Fidelity Investment" 
                         className="brand-logo"
                     />
                 </Link>

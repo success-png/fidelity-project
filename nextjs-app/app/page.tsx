@@ -124,7 +124,7 @@ export default function HomePage() {
         </section>
 
         <section className="links-section">
-          <div className="links-content">
+          <div className="links-content" style={{ display: "flex", flexDirection: "column", gap: "5px" }}>
             <a
               href="https://brokercheck.finra.org/firm/summary/7784"
               target="_blank"
@@ -255,31 +255,69 @@ export default function HomePage() {
                 padding: "0 20px 0 0",
               }}
             >
-              <Link href="/research/mutual-funds" className="quick-link" style={{ fontSize: "14px" }}>
+              <Link href="/products/retirement-iras" className="quick-link" style={{ fontSize: "12px" }}>
+                IRAs
+              </Link>
+              <Link href="/planning/retirement" className="quick-link" style={{ fontSize: "12px" }}>
+                Retirement Planning
+              </Link>
+              <Link href="/products/retirement-iras" className="quick-link" style={{ fontSize: "12px" }}>
+                Small Business Retirement Plans
+              </Link>
+              <Link href="/planning/charitable-giving" className="quick-link" style={{ fontSize: "12px" }}>
+                Charitable Giving
+              </Link>
+              <Link href="/research/marketplace-solutions" className="quick-link" style={{ fontSize: "12px" }}>
+                Marketplace Solutions
+              </Link>
+              <a
+                href="https://brokercheck.finra.org/firm/summary/7784"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="quick-link"
+                style={{ fontSize: "12px" }}
+              >
+                FINRA&apos;s BrokerCheck
+              </a>
+              <Link href="/company/why-fidelity" className="quick-link" style={{ fontSize: "12px" }}>
+                Why Fidelity
+              </Link>
+            </div>
+            <div
+              className="quick-links-column"
+              style={{
+                flex: 1,
+                display: "flex",
+                flexDirection: "column",
+                gap: "12px",
+                padding: "0 10px",
+              }}
+            >
+              <Link href="/research/mutual-funds" className="quick-link" style={{ fontSize: "12px" }}>
                 Mutual Funds
               </Link>
-              <Link href="/products/etfs" className="quick-link" style={{ fontSize: "14px" }}>
+              <Link href="/products/etfs" className="quick-link" style={{ fontSize: "12px" }}>
                 ETFs
               </Link>
-              <Link href="/research/fixed-income" className="quick-link" style={{ fontSize: "14px" }}>
+              <Link href="/research/fixed-income" className="quick-link" style={{ fontSize: "12px" }}>
                 Fixed Income
               </Link>
-              <Link href="/research/fixed-income" className="quick-link" style={{ fontSize: "14px" }}>
+              <Link href="/research/fixed-income" className="quick-link" style={{ fontSize: "12px" }}>
                 Bonds
               </Link>
-              <Link href="/research/fixed-income" className="quick-link" style={{ fontSize: "14px" }}>
+              <Link href="/research/fixed-income" className="quick-link" style={{ fontSize: "12px" }}>
                 CDs
               </Link>
-              <Link href="/research/options" className="quick-link" style={{ fontSize: "14px" }}>
+              <Link href="/research/options" className="quick-link" style={{ fontSize: "12px" }}>
                 Options
               </Link>
-              <Link href="/products/crypto" className="quick-link" style={{ fontSize: "14px" }}>
+              <Link href="/products/crypto" className="quick-link" style={{ fontSize: "12px" }}>
                 Crypto
               </Link>
-              <Link href="/accounts/fidelity-trader-plus" className="quick-link" style={{ fontSize: "14px" }}>
+              <Link href="/accounts/fidelity-trader-plus" className="quick-link" style={{ fontSize: "12px" }}>
                 Fidelity Trader+
               </Link>
-              <Link href="/company/locations" className="quick-link" style={{ fontSize: "14px" }}>
+              <Link href="/company/locations" className="quick-link" style={{ fontSize: "12px" }}>
                 Investor Centers
               </Link>
             </div>
@@ -293,78 +331,142 @@ export default function HomePage() {
                 padding: "0 10px",
               }}
             >
-              <Link href="/research/stocks-etfs-crypto" className="quick-link" style={{ fontSize: "14px" }}>
+              <Link href="/research/stocks-etfs-crypto" className="quick-link" style={{ fontSize: "12px" }}>
                 Stocks
               </Link>
-              <Link href="/company/trading" className="quick-link" style={{ fontSize: "14px" }}>
+              <Link href="/company/trading" className="quick-link" style={{ fontSize: "12px" }}>
                 Online Trading
               </Link>
-              <Link href="/products/direct-indexing" className="quick-link" style={{ fontSize: "14px" }}>
+              <Link href="/products/direct-indexing" className="quick-link" style={{ fontSize: "12px" }}>
                 Direct Indexing
               </Link>
-              <Link href="/products/sustainable-investing" className="quick-link" style={{ fontSize: "14px" }}>
+              <Link href="/products/sustainable-investing" className="quick-link" style={{ fontSize: "12px" }}>
                 Sustainable Investing
               </Link>
-              <Link href="/products/life-insurance" className="quick-link" style={{ fontSize: "14px" }}>
+              <Link href="/products/life-insurance" className="quick-link" style={{ fontSize: "12px" }}>
                 Annuities
               </Link>
-              <Link href="/products/life-insurance" className="quick-link" style={{ fontSize: "14px" }}>
+              <Link href="/products/life-insurance" className="quick-link" style={{ fontSize: "12px" }}>
                 Life Insurance
               </Link>
-              <Link href="/planning/long-term-care" className="quick-link" style={{ fontSize: "14px" }}>
+              <Link href="/planning/long-term-care" className="quick-link" style={{ fontSize: "12px" }}>
                 Long-Term Care Planning
               </Link>
-              <Link href="/products/college-savings" className="quick-link" style={{ fontSize: "14px" }}>
+              <Link href="/products/college-savings" className="quick-link" style={{ fontSize: "12px" }}>
                 529 Plans
               </Link>
-              <Link href="/products/health-savings" className="quick-link" style={{ fontSize: "14px" }}>
+              <Link href="/products/health-savings" className="quick-link" style={{ fontSize: "12px" }}>
                 Health Savings Account
               </Link>
             </div>
             <div
               className="quick-links-divider"
-              style={{ width: "1px", background: "#000" }}
+              style={{ width: "1px", background: "#ccc" }}
             ></div>
             <div
-              className="quick-links-column"
+              className="stay-connected-content"
               style={{
-                flex: 1,
+                flex: 2,
                 display: "flex",
                 flexDirection: "column",
-                gap: "12px",
+                gap: "20px",
                 padding: "0 0 0 20px",
               }}
             >
-              <Link href="/products/retirement-iras" className="quick-link" style={{ fontSize: "14px" }}>
-                IRAs
-              </Link>
-              <Link href="/planning/retirement" className="quick-link" style={{ fontSize: "14px" }}>
-                Retirement Planning
-              </Link>
-              <Link href="/products/retirement-iras" className="quick-link" style={{ fontSize: "14px" }}>
-                Small Business Retirement Plans
-              </Link>
-              <Link href="/planning/charitable-giving" className="quick-link" style={{ fontSize: "14px" }}>
-                Charitable Giving
-              </Link>
-              <Link href="/research/marketplace-solutions" className="quick-link" style={{ fontSize: "14px" }}>
-                Marketplace Solutions
-              </Link>
-              <a
-                href="https://brokercheck.finra.org/firm/summary/7784"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="quick-link"
-                style={{ fontSize: "14px" }}
-              >
-                FINRA&apos;s BrokerCheck
-              </a>
-              <Link href="/company/why-fidelity" className="quick-link" style={{ fontSize: "14px" }}>
-                Why Fidelity
-              </Link>
+              <h2 className="stay-connected-title" style={{ color: "#2f7d2f", fontSize: "18px", fontWeight: "600", marginBottom: "10px" }}>
+                Stay Connected
+              </h2>
+              
+              <div className="investor-center-search">
+                <div className="search-container" style={{ display: "flex", alignItems: "center", background: "#fff", border: "1px solid #ccc", borderRadius: "4px", padding: "4px", maxWidth: "300px" }}>
+                  <input
+                    type="text"
+                    placeholder="Locate an Investor Center by ZIP Code"
+                    className="search-input"
+                    style={{ flex: 1, border: "none", outline: "none", padding: "8px 12px", fontSize: "12px", background: "transparent" }}
+                  />
+                  <button className="search-button" style={{ background: "#2f7d2f", color: "#fff", border: "none", padding: "8px 16px", borderRadius: "4px", cursor: "pointer", fontSize: "12px" }}>
+                    Search
+                  </button>
+                </div>
+              </div>
+
+              <div className="social-media-links" style={{ display: "grid", gridTemplateColumns: "repeat(4, 1fr)", gap: "15px", maxWidth: "600px", margin: "0 auto 40px" }}>
+                <a href="https://www.instagram.com/fidelity" target="_blank" rel="noopener noreferrer" className="social-link" style={{ display: "flex", alignItems: "center", gap: "8px", color: "#0066CC", fontSize: "12px", textDecoration: "none" }}>
+                  <i className="fab fa-instagram" style={{ color: "#E4405F", fontSize: "16px" }}></i>
+                  Instagram
+                </a>
+                <a href="https://www.linkedin.com/company/fidelity-investments" target="_blank" rel="noopener noreferrer" className="social-link" style={{ display: "flex", alignItems: "center", gap: "8px", color: "#0066CC", fontSize: "12px", textDecoration: "none" }}>
+                  <i className="fab fa-linkedin" style={{ color: "#0077B5", fontSize: "16px" }}></i>
+                  LinkedIn
+                </a>
+                <a href="https://www.youtube.com/fidelity" target="_blank" rel="noopener noreferrer" className="social-link" style={{ display: "flex", alignItems: "center", gap: "8px", color: "#0066CC", fontSize: "12px", textDecoration: "none" }}>
+                  <i className="fab fa-youtube" style={{ color: "#FF0000", fontSize: "16px" }}></i>
+                  YouTube
+                </a>
+                <a href="https://www.reddit.com/r/fidelity" target="_blank" rel="noopener noreferrer" className="social-link" style={{ display: "flex", alignItems: "center", gap: "8px", color: "#0066CC", fontSize: "12px", textDecoration: "none" }}>
+                  <i className="fab fa-reddit" style={{ color: "#FF4500", fontSize: "16px" }}></i>
+                  Reddit
+                </a>
+                <a href="https://twitter.com/fidelity" target="_blank" rel="noopener noreferrer" className="social-link" style={{ display: "flex", alignItems: "center", gap: "8px", color: "#0066CC", fontSize: "12px", textDecoration: "none" }}>
+                  <i className="fab fa-twitter" style={{ color: "#1DA1F2", fontSize: "16px" }}></i>
+                  X (Twitter)
+                </a>
+                <a href="https://www.facebook.com/fidelity" target="_blank" rel="noopener noreferrer" className="social-link" style={{ display: "flex", alignItems: "center", gap: "8px", color: "#0066CC", fontSize: "12px", textDecoration: "none" }}>
+                  <i className="fab fa-facebook" style={{ color: "#1877F2", fontSize: "16px" }}></i>
+                  Facebook
+                </a>
+                <a href="https://www.tiktok.com/@fidelity" target="_blank" rel="noopener noreferrer" className="social-link" style={{ display: "flex", alignItems: "center", gap: "8px", color: "#0066CC", fontSize: "12px", textDecoration: "none" }}>
+                  <i className="fab fa-tiktok" style={{ color: "#000000", fontSize: "16px" }}></i>
+                  TikTok
+                </a>
+                <a href="https://discord.gg/fidelity" target="_blank" rel="noopener noreferrer" className="social-link" style={{ display: "flex", alignItems: "center", gap: "8px", color: "#0066CC", fontSize: "12px", textDecoration: "none" }}>
+                  <i className="fab fa-discord" style={{ color: "#5865F2", fontSize: "16px" }}></i>
+                  Discord
+                </a>
+              </div>
+
+              <div className="additional-links" style={{ textAlign: "center", marginBottom: "30px" }}>
+                <a href="/apps" className="additional-link" style={{ color: "#0066CC", fontSize: "14px", textDecoration: "none", margin: "0 15px" }}>
+                  Fidelity Apps
+                </a>
+                <a href="/refer-friend" className="additional-link" style={{ color: "#0066CC", fontSize: "14px", textDecoration: "none", margin: "0 15px" }}>
+                  Refer a Friend
+                </a>
+              </div>
+
+              <div className="footer-links" style={{ marginTop: "40px", fontSize: "10px", color: "#0066CC", lineHeight: "1.4" }}>
+                <div style={{ marginBottom: "10px" }}>
+                  <a href="/terms" style={{ color: "#0066CC", textDecoration: "none", marginRight: "8px" }}>Terms of Use</a>
+                  <span style={{ margin: "0 5px" }}>•</span>
+                  <a href="/privacy" style={{ color: "#0066CC", textDecoration: "none", marginRight: "8px" }}>Privacy</a>
+                  <span style={{ margin: "0 5px" }}>•</span>
+                  <a href="/security" style={{ color: "#666", textDecoration: "none", marginRight: "8px" }}>Security</a>
+                  <span style={{ margin: "0 5px" }}>•</span>
+                  <a href="/site-map" style={{ color: "#666", textDecoration: "none", marginRight: "8px" }}>Site Map</a>
+                  <span style={{ margin: "0 5px" }}>•</span>
+                  <a href="/accessibility" style={{ color: "#666", textDecoration: "none", marginRight: "8px" }}>Accessibility</a>
+                  <span style={{ margin: "0 5px" }}>•</span>
+                  <a href="/contact" target="_blank" style={{ color: "#666", textDecoration: "none" }}>Contact Us, (Opens in a new window)</a>
+                </div>
+                <div style={{ marginBottom: "10px" }}>
+                  <a href="/share-screen" target="_blank" style={{ color: "#666", textDecoration: "none", marginRight: "8px" }}>Share Your Screen</a>
+                  <span style={{ margin: "0 5px" }}>•</span>
+                  <a href="/disclosures" target="_blank" style={{ color: "#666", textDecoration: "none", marginRight: "8px" }}>Disclosures, (Opens in a new window)</a>
+                  <span style={{ margin: "0 5px" }}>•</span>
+                  <a href="/cookies" style={{ color: "#666", textDecoration: "none" }}>Manage My Targeting/Advertising Cookies</a>
+                </div>
+                <div style={{ marginBottom: "10px" }}>
+                  This is for persons in US only.
+                </div>
+                <div>
+                  Copyright 1998-2026 FMR LLC. All Rights Reserved.
+                </div>
+              </div>
             </div>
           </div>
         </section>
+
       </main>
 
       <Footer />
