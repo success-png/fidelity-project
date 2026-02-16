@@ -6,7 +6,7 @@
 
 'use client';
 
-import React, { useState, useCallback } from 'react';
+import React, { useState, useCallback, useEffect } from 'react';
 import { MAIN_NAV } from '@/config/navigation';
 import type { NavSection } from '@/types/navigation';
 import { NavItem } from './NavItem';
@@ -49,10 +49,49 @@ export function Navigation({
     showSearch = true
 }: NavigationProps): React.ReactElement {
     const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+    const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
 
     const toggleMobileMenu = useCallback(() => {
         setIsMobileMenuOpen((prev) => !prev);
     }, []);
+
+    const handleDropdownToggle = useCallback((dropdownId: string) => {
+        setActiveDropdown((prev) => prev === dropdownId ? null : dropdownId);
+    }, []);
+
+    const handleDropdownClose = useCallback(() => {
+        setActiveDropdown(null);
+    }, []);
+
+    // Close dropdowns when clicking outside
+    useEffect(() => {
+        const handleClickOutside = (event: MouseEvent) => {
+            const target = event.target as Node;
+            const navElement = document.getElementById('mainNav');
+            const navRightElement = document.querySelector('.nav-right');
+            
+            if (navElement && navRightElement && 
+                !navElement.contains(target) && 
+                !navRightElement.contains(target)) {
+                handleDropdownClose();
+            }
+        };
+
+        // Close dropdowns on Escape key
+        const handleEscapeKey = (event: KeyboardEvent) => {
+            if (event.key === 'Escape') {
+                handleDropdownClose();
+            }
+        };
+
+        document.addEventListener('mousedown', handleClickOutside);
+        document.addEventListener('keydown', handleEscapeKey);
+
+        return () => {
+            document.removeEventListener('mousedown', handleClickOutside);
+            document.removeEventListener('keydown', handleEscapeKey);
+        };
+    }, [handleDropdownClose]);
 
     return (
         <>
@@ -62,7 +101,13 @@ export function Navigation({
                 aria-label="Primary"
             >
                 {sections.map((section) => (
-                    <NavItem key={section.id} section={section} />
+                    <NavItem 
+                        key={section.id} 
+                        section={section}
+                        isActive={activeDropdown === section.id}
+                        onToggle={() => handleDropdownToggle(section.id)}
+                        onClose={handleDropdownClose}
+                    />
                 ))}
             </nav>
 

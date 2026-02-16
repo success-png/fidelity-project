@@ -16,6 +16,12 @@ export interface NavItemProps {
     section: NavSection;
     /** Whether this is a simple link (no dropdown) */
     isSimpleLink?: boolean;
+    /** Whether this dropdown is currently active */
+    isActive?: boolean;
+    /** Callback when dropdown is toggled */
+    onToggle?: () => void;
+    /** Callback when dropdown is closed */
+    onClose?: () => void;
 }
 
 /**
@@ -24,7 +30,10 @@ export interface NavItemProps {
  */
 export function NavItem({
     section,
-    isSimpleLink = false
+    isSimpleLink = false,
+    isActive = false,
+    onToggle,
+    onClose
 }: NavItemProps): React.ReactElement {
     // Determine specific dropdown classes based on section ID
     let dropdownClasses = 'dropdown';
@@ -50,14 +59,16 @@ export function NavItem({
     }
 
     return (
-        <div className="nav-item">
+        <div className={`nav-item ${isActive ? 'is-open' : ''}`}>
             <button
                 type="button"
                 className="nav-trigger"
-                aria-expanded="false"
+                aria-expanded={isActive}
                 aria-label={section.ariaLabel}
+                onClick={onToggle}
             >
                 {section.label}
+                <i className="fas fa-angle-down" aria-hidden="true" />
             </button>
             {(section.links || section.submenus) && (
                 <Dropdown

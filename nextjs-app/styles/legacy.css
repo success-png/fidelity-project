@@ -7,7 +7,7 @@
 
 /* Header Styles */
 .site-header {
-    position: static;
+    position: relative;
     z-index: 1000;
 }
 
@@ -17,7 +17,7 @@
 }
 
 .header-green-inner {
-    height: 40px;
+    height: 44px;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -30,17 +30,22 @@
 }
 
 .brand-logo {
-    height: 44px;
+    height: 32px;
     width: auto;
     display: block;
+}
+
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: 26px;
 }
 
 .header-links {
     display: flex;
     align-items: center;
-    gap: 18px;
+    gap: 20px;
     flex-wrap: wrap;
-    justify-content: flex-end;
 }
 
 .header-link {
@@ -334,14 +339,14 @@
     gap: 10px;
     border: 1px solid #bdbdbd;
     border-radius: 999px;
-    height: 34px;
-    padding: 0 12px;
-    min-width: 310px;
+    height: 30px;
+    padding: 0 10px;
+    min-width: 260px;
 }
 
 .search-icon {
     color: #333;
-    font-size: 14px;
+    font-size: 12px;
 }
 
 .search-input {

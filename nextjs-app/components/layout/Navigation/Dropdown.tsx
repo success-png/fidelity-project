@@ -6,7 +6,7 @@
 
 'use client';
 
-import React from 'react';
+import React, { useState, useCallback } from 'react';
 import Link from 'next/link';
 import type { NavLink, NavSubmenu } from '@/types/navigation';
 
@@ -46,13 +46,24 @@ function DropdownLink({ link }: { link: NavLink }): React.ReactElement {
  * Renders a submenu section with nested dropdown
  */
 function DropdownSubmenuItem({ submenu }: { submenu: NavSubmenu }): React.ReactElement {
+    const [isSubmenuOpen, setIsSubmenuOpen] = useState(false);
+
+    const toggleSubmenu = useCallback(() => {
+        setIsSubmenuOpen((prev) => !prev);
+    }, []);
+
     // Check if this is a nested submenu structure (like in Planning & Advice -> Robo Investing)
     // or a simple group of links
     
     // For the specific "Robo Investing Plus Advice" submenu structure in legacy code:
     return (
-        <div className="dropdown-item dropdown-item--submenu" role="none">
-            <button className="dropdown-subtrigger" type="button" aria-expanded="false">
+        <div className={`dropdown-item dropdown-item--submenu ${isSubmenuOpen ? 'is-open' : ''}`} role="none">
+            <button 
+                className="dropdown-subtrigger" 
+                type="button" 
+                aria-expanded={isSubmenuOpen}
+                onClick={toggleSubmenu}
+            >
                 <span className="dropdown-text">{submenu.title}</span>
                 <i className="fas fa-angle-right dropdown-caret" aria-hidden="true"></i>
             </button>
