@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import React, { useState } from "react";
 import Link from "next/link";
 import { Header } from "@/components/layout/Header/Header";
 import { Footer } from "@/components/layout/Footer/Footer";
@@ -234,7 +234,7 @@ export default function HomePage() {
           </div>
         </section>
 
-        <section className="quick-links-section">
+        <section className="quick-links-section" style={{ background: "#333333" }}>
           <div
             className="quick-links-content"
             style={{
@@ -426,15 +426,6 @@ export default function HomePage() {
                 </a>
               </div>
 
-              <div className="additional-links" style={{ textAlign: "center", marginBottom: "30px" }}>
-                <a href="/apps" className="additional-link" style={{ color: "#0066CC", fontSize: "14px", textDecoration: "none", margin: "0 15px" }}>
-                  Fidelity Apps
-                </a>
-                <a href="/refer-friend" className="additional-link" style={{ color: "#0066CC", fontSize: "14px", textDecoration: "none", margin: "0 15px" }}>
-                  Refer a Friend
-                </a>
-              </div>
-
               <div className="footer-links" style={{ marginTop: "40px", fontSize: "10px", color: "#0066CC", lineHeight: "1.4" }}>
                 <div style={{ marginBottom: "10px" }}>
                   <a href="/terms" style={{ color: "#0066CC", textDecoration: "none", marginRight: "8px" }}>Terms of Use</a>
@@ -447,14 +438,14 @@ export default function HomePage() {
                   <span style={{ margin: "0 5px" }}>•</span>
                   <a href="/accessibility" style={{ color: "#666", textDecoration: "none", marginRight: "8px" }}>Accessibility</a>
                   <span style={{ margin: "0 5px" }}>•</span>
-                  <a href="/contact" target="_blank" style={{ color: "#666", textDecoration: "none" }}>Contact Us, (Opens in a new window)</a>
+                  <a href="/contact" target="_blank" style={{ color: "#666", textDecoration: "none", marginRight: "8px" }}>Contact Us, (Opens in a new window)</a>
                 </div>
                 <div style={{ marginBottom: "10px" }}>
                   <a href="/share-screen" target="_blank" style={{ color: "#666", textDecoration: "none", marginRight: "8px" }}>Share Your Screen</a>
                   <span style={{ margin: "0 5px" }}>•</span>
                   <a href="/disclosures" target="_blank" style={{ color: "#666", textDecoration: "none", marginRight: "8px" }}>Disclosures, (Opens in a new window)</a>
                   <span style={{ margin: "0 5px" }}>•</span>
-                  <a href="/cookies" style={{ color: "#666", textDecoration: "none" }}>Manage My Targeting/Advertising Cookies</a>
+                  <a href="/cookies" style={{ color: "#666", textDecoration: "none", marginRight: "8px" }}>Manage My Targeting/Advertising Cookies</a>
                 </div>
                 <div style={{ marginBottom: "10px" }}>
                   This is for persons in US only.
@@ -467,9 +458,94 @@ export default function HomePage() {
           </div>
         </section>
 
-      </main>
+        <section className="footer-disclaimer-section" style={{ background: "#fff", padding: "60px 0" }}>
+          <div className="container" style={{ maxWidth: "1200px", margin: "0 auto", padding: "0 20px" }}>
+            <div className="footer-disclaimer-content" style={{ fontSize: "10px", color: "#666", lineHeight: "1.2", textAlign: "left" }}>
+              <div style={{ marginBottom: "5px" }}>
+                Keep in mind that investing involves risk. The value of your investment will fluctuate over time, and you may gain or lose money.
+              </div>
+              
+              <div style={{ marginBottom: "5px" }}>
+                <div style={{ marginBottom: "2px", fontWeight: "600", display: "inline" }}>1.</div>
+                <div style={{ paddingLeft: "20px", display: "inline" }}>
+                  $0.00 commission applies to online U.S. equity trades and exchange-traded funds (ETFs) in a Fidelity retail account only for Fidelity Brokerage Services LLC retail clients. Sell orders are subject to an activity assessment fee (historically from $0.01 to $0.03 per $1,000 of principal). Other exclusions and conditions may apply. A limited number of ETFs are subject to a transaction-based service fee of $100. See full list at Fidelity.com/commissions. Employee equity compensation transactions and accounts managed by advisors or intermediaries through Fidelity Institutional® are subject to different commission schedules.
+                </div>
+              </div>
+              
+              <div style={{ marginBottom: "5px" }}>
+                <div style={{ marginBottom: "2px", fontWeight: "600", display: "inline" }}>2.</div>
+                <div style={{ paddingLeft: "20px", display: "inline" }}>
+                  Zero account minimums and zero account fees apply to retail brokerage accounts only. Expenses charged by investments (e.g., funds, managed accounts, and certain HSAs) and commissions, interest charges, or other expenses for transactions may still apply. See Fidelity.com/commissions for further details.
+                </div>
+              </div>
+              
+              <div style={{ marginBottom: "5px" }}>
+                <div style={{ marginBottom: "2px", fontWeight: "600", display: "inline" }}>3.</div>
+                <div style={{ paddingLeft: "20px", display: "inline" }}>
+                  Fractional share quantities can be entered out to 3 decimal places (.001) as long as value of order is at least $1.00. Dollar-based trades can be entered out to 2 decimal places (e.g. $250.00).
+                </div>
+              </div>
+              
+              <div style={{ marginBottom: "5px" }}>
+                <div style={{ marginBottom: "2px", fontWeight: "600", display: "inline" }}>4.</div>
+                <div style={{ paddingLeft: "20px", display: "inline" }}>
+                  For a distribution to be considered qualified, 5-year aging requirement has to be satisfied, and you must be age 59½ or older or meet one of several exemptions (disability, qualified first-time home purchase, or death among them).
+                </div>
+              </div>
+              
+              <div style={{ marginBottom: "5px" }}>
+                <div style={{ marginBottom: "2px", fontWeight: "600", display: "inline" }}>5.</div>
+                <div style={{ paddingLeft: "20px", display: "inline" }}>
+                  With respect to federal taxation only. Contributions, investment earnings, and distributions may or may not be subject to state taxation.
+                </div>
+              </div>
+              
+              <div style={{ marginBottom: "5px" }}>
+                <div style={{ marginBottom: "2px", fontWeight: "600", display: "inline" }}>6.</div>
+                <div style={{ paddingLeft: "20px", display: "inline" }}>
+                  There are zero account fees and zero account minimums for Fidelity HSAs® offered through Fidelity.com to individuals and employers. There may be commissions, interest charges, and other expenses associated with transacting or holding specific investments (e.g., mutual funds), or selecting certain account features or types (e.g., managed accounts). When a Fidelity HSA® is offered as part of an employer's benefits package (which occurs through NetBenefits®), Fidelity charges employer a recordkeeping fee. This is a common fee charged by HSA providers. This fee may be up to $48/year, but it could be reduced or waived depending on HSA balance. Employers may pass this fee on to their employees. Contact employer for more information. Accounts that have been opened through, or are serviced by, an intermediary, or in connection with your workplace benefits, may incur additional fees or restrictions. Account minimums may apply to certain investments, including purchase of some Fidelity mutual funds that have a minimum investment requirement. If you choose to invest in mutual funds, underlying fund expenses still apply. For more information and details, see fund's prospectus and/or www.fidelity.com/commissions.
+                </div>
+              </div>
+              
+              <div style={{ marginBottom: "5px" }}>
+                <div style={{ marginBottom: "2px", fontWeight: "600", display: "inline" }}>7.</div>
+                <div style={{ paddingLeft: "20px", display: "inline" }}>
+                  529 distributions for qualified education expenses are generally federal income tax free. 529 assets may be used to pay for (i) qualified higher education expenses, (ii) qualified expenses for registered apprenticeship programs, (iii) up to $10,000 per taxable year per beneficiary for tuition expenses in connection with enrollment at a public, private, or religious elementary or secondary educational institution. Although such assets may come from multiple 529 accounts, $10,000 qualified withdrawal limit will be aggregated on a per beneficiary basis. The IRS has not provided guidance to date on methodology of allocating $10,000 annual maximum among withdrawals from different 529 accounts, and (iv) amounts paid as principal or interest on any qualified education loan of a 529 plan designated beneficiary or a sibling of designated beneficiary. The amount treated as a qualified expense is subject to a lifetime limit of $10,000 per individual. Although assets may come from multiple 529 accounts, $10,000 qualified withdrawal limit will be aggregated on a per beneficiary basis.
+                </div>
+              </div>
+              
+              <div style={{ marginBottom: "25px" }}>
+                The information provided herein is general in nature. It is not intended, nor should it be construed, as legal or tax advice. Because administration of an HSA is a taxpayer responsibility, you are strongly encouraged to consult your tax advisor before opening an HSA. You are also encouraged to review information available from Internal Revenue Service (IRS) for taxpayers, which can be found on IRS website at IRS.gov. You can find IRS Publication 969, Health Savings Accounts and Other Tax-Favored Health Plans, and IRS Publication 502, Medical and Dental Expenses, online, or you can call the IRS to request a copy of each at 800-829-3676.
+              </div>
+              
+              <div style={{ marginBottom: "25px" }}>
+                The Fidelity Investments logo is a registered service mark of FMR LLC.
+              </div>
+              
+              <div style={{ marginBottom: "25px" }}>
+                Fidelity advisors are licensed with Strategic Advisers LLC (Strategic Advisers), a registered investment adviser, and registered with Fidelity Brokerage Services LLC (FBS), a registered broker-dealer. Whether a Fidelity advisor provides advisory services through Strategic Advisers for a fee or brokerage services through FBS will depend on products and services you choose.
+              </div>
+              
+              <div style={{ marginBottom: "25px" }}>
+                Fidelity does not provide legal or tax advice. The information herein is general in nature and should not be considered legal or tax advice. Consult an attorney or tax professional regarding your specific situation.
+              </div>
+              
+              <div style={{ marginBottom: "25px" }}>
+                The images, graphs, tools, and videos are for illustrative purposes only.
+              </div>
+              
+              <div style={{ marginBottom: "25px" }}>
+                Fidelity Brokerage Services LLC, Member NYSE, SIPC, 900 Salem Street, Smithfield, RI 02917
+              </div>
+              
+              <div>
+                782377.115.0
+              </div>
+            </div>
+          </div>
+        </section>
 
-      <Footer />
+      </main>
     </>
   );
 }

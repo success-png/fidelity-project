@@ -44,6 +44,24 @@ export function Footer({ className = '' }: FooterProps): React.ReactElement {
                             <li><Link href="/support/disclosures">Disclosures</Link></li>
                         </ul>
                     </div>
+                    <div className="footer-section">
+                        <h4>Account Types</h4>
+                        <ul>
+                            <li><Link href="/accounts/retirement">Retirement</Link></li>
+                            <li><Link href="/accounts/brokerage">Brokerage</Link></li>
+                            <li><Link href="/accounts/health-savings">Health Savings</Link></li>
+                            <li><Link href="/accounts/small-business">Small Business</Link></li>
+                        </ul>
+                    </div>
+                    <div className="footer-section">
+                        <h4>Tools & Calculators</h4>
+                        <ul>
+                            <li><Link href="/tools/retirement-planner">Retirement Planner</Link></li>
+                            <li><Link href="/tools/portfolio-analysis">Portfolio Analysis</Link></li>
+                            <li><Link href="/tools/college-savings">College Savings</Link></li>
+                            <li><Link href="/tools/tax-calculator">Tax Calculator</Link></li>
+                        </ul>
+                    </div>
                 </div>
 
                 <div className="footer-bottom">

@@ -7,6 +7,7 @@
 import React from 'react';
 import Link from 'next/link';
 import { SECONDARY_NAV } from '@/config/navigation';
+import { Navigation } from '../Navigation/Navigation';
 
 /**
  * Filter utility links (non-CTA links)
@@ -95,6 +96,9 @@ export function TopBar({ className = '', isAuthenticated = false }: TopBarProps)
                         );
                     })}
                 </div>
+
+                {/* Mobile Menu */}
+                <Navigation showSearch={false} />
             </div>
         </div>
     );

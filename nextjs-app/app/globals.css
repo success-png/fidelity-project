@@ -13,7 +13,7 @@
 /**
  * Tailwind Theme Configuration with Fidelity Colors
  */
-@theme {
+:root {
   /* Fidelity Color Palette - Primary */
   --color-fidelity-green: var(--fidelity-green);
   --color-fidelity-dark-green: var(--fidelity-dark-green);

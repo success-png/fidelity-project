@@ -7,8 +7,7 @@
 
 /* Header Styles */
 .site-header {
-    position: sticky;
-    top: 0;
+    position: static;
     z-index: 1000;
 }
 
@@ -18,7 +17,7 @@
 }
 
 .header-green-inner {
-    height: 70px;
+    height: 40px;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -31,7 +30,7 @@
 }
 
 .brand-logo {
-    height: 56px;
+    height: 44px;
     width: auto;
     display: block;
 }
@@ -84,7 +83,7 @@
 }
 
 .header-white-inner {
-    height: 52px;
+    height: 32px;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -993,15 +992,15 @@ box-shadow: 0 4px 12px rgba(47, 125, 47, 0.3);
 
 /* Footer Styles */
 .main-footer {
-    padding: 40px 0;
-    background: #fff;
+    background: #2c3e50;
+    color: #fff;
+    padding: 60px 0 30px;
 }
 
 .footer-content {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 16px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
     max-width: 1200px;
     margin: 0 auto;
     padding: 0 20px;
@@ -1010,15 +1009,17 @@ box-shadow: 0 4px 12px rgba(47, 125, 47, 0.3);
 .footer-section {
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: flex-start;
 }
 
 .footer-section h4 {
     font-size: 16px;
     font-weight: 600;
-    color: #111;
-    margin: 0 0 16px;
+    color: #fff;
+    margin: 0 0 20px;
     font-family: "Fidelity Sans", Arial, sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
 }
 
 .footer-section ul {
@@ -1028,30 +1029,34 @@ box-shadow: 0 4px 12px rgba(47, 125, 47, 0.3);
 }
 
 .footer-section li {
-    margin: 0 0 12px;
+    margin: 0;
 }
 
 .footer-section a {
-    color: #003d7a;
-    text-decoration: underline;
+    color: #b8c5d6;
+    text-decoration: none;
     font-size: 14px;
     font-family: "Fidelity Sans", Arial, sans-serif;
     transition: color 0.2s ease;
+    line-height: 1;
+    display: block;
+    padding: 0;
 }
 
 .footer-section a:hover {
-    color: #002d5c;
-    text-decoration: none;
+    color: #fff;
+    text-decoration: underline;
 }
 
 .footer-bottom {
     text-align: center;
-    padding: 20px 0;
-    margin-top: 20px;
+    padding: 30px 0 0;
+    margin-top: 40px;
+    border-top: 1px solid #3d566e;
 }
 
 .footer-bottom p {
-    color: #777;
+    color: #8b9dc3;
     font-size: 12px;
     margin: 0;
     font-family: "Fidelity Sans", Arial, sans-serif;
@@ -1059,8 +1064,8 @@ box-shadow: 0 4px 12px rgba(47, 125, 47, 0.3);
 
 /* Quick Links Section */
 .quick-links-section {
-    padding: 40px 0 !important;
-    background: #fff !important;
+    padding: 20px 0 !important;
+    background: #e5e5e5 !important;
 }
 
 .quick-links-section .quick-links-content {
@@ -1082,7 +1087,7 @@ box-shadow: 0 4px 12px rgba(47, 125, 47, 0.3);
 .quick-links-section .quick-link {
     color: #003d7a !important;
     text-decoration: none !important;
-    font-size: 16px !important;
+    font-size: 12px !important;
     font-weight: 600 !important;
     font-family: "Fidelity Sans", Arial, sans-serif !important;
     transition: color 0.2s ease !important;
