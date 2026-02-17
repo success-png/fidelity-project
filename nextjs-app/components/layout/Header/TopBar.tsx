@@ -44,7 +44,7 @@ export function TopBar({ className = '', isAuthenticated = false }: TopBarProps)
     return (
         <div className={`header-green ${className}`}>
             <div className="container header-green-inner">
-                {/* Brand Logo */}
+                {/* Brand Logo - Centered on Mobile/Tablet */}
                 <Link href="/" className="brand" aria-label="Fidelity Investments - Home">
                     <img 
                         src="/logo-horizontal.svg" 
@@ -78,22 +78,17 @@ export function TopBar({ className = '', isAuthenticated = false }: TopBarProps)
                         </Link>
                     )}
 
-                    {/* CTA Buttons */}
-                    {ctaButtons.map((button) => {
-                        const isOpenAccount = button.id === 'open-account';
-                        const buttonClass = isOpenAccount ? 'header-btn--light' : 'header-btn--outline';
-
-                        return (
-                            <Link
-                                key={button.id}
-                                href={button.href}
-                                className={`header-btn ${buttonClass}`}
-                                aria-label={button.ariaLabel}
-                            >
-                                {button.label}
-                            </Link>
-                        );
-                    })}
+                    {/* CTA Buttons (Open an account, Log in) */}
+                    {ctaButtons.map((button) => (
+                        <Link
+                            key={button.id}
+                            href={button.href}
+                            className={`header-btn header-btn--${button.id === 'login' ? 'light' : 'primary'}`}
+                            aria-label={button.ariaLabel}
+                        >
+                            {button.label}
+                        </Link>
+                    ))}
                 </div>
             </div>
         </div>
