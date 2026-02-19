@@ -4,7 +4,7 @@
  * Uses legacy CSS classes for exact UI replication
  */
 
-import React from 'react';
+import React, { useState, useCallback, useEffect } from 'react';
 import Link from 'next/link';
 import { SECONDARY_NAV } from '@/config/navigation';
 
@@ -37,24 +37,67 @@ export interface TopBarProps {
 }
 
 export function TopBar({ className = '', isAuthenticated = false }: TopBarProps): React.ReactElement {
+    const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
     const utilityLinks = SECONDARY_NAV.filter((link) => isUtilityLink(link.id));
     const ctaButtons = SECONDARY_NAV.filter((link) => isCtaButton(link.id));
     const authenticatedLink = SECONDARY_NAV.find((link) => link.id === 'profile');
+    const loginButton = ctaButtons.find((button) => button.id === 'login');
+
+    const toggleMobileMenu = useCallback(() => {
+        setIsMobileMenuOpen((prev) => !prev);
+    }, []);
+
+    // Effect to add/remove 'is-open' class to body when mobile menu state changes
+    useEffect(() => {
+        // Only run on client-side
+        if (typeof window !== 'undefined') {
+            if (isMobileMenuOpen) {
+                document.body.classList.add('mobile-menu-open');
+            } else {
+                document.body.classList.remove('mobile-menu-open');
+            }
+        }
+    }, [isMobileMenuOpen]);
 
     return (
         <div className={`header-green ${className}`}>
             <div className="container header-green-inner">
-                {/* Brand Logo - Centered on Mobile/Tablet */}
+                {/* Mobile Hamburger Menu - Left side */}
+                <button 
+                    className="mobile-nav-toggle" 
+                    type="button" 
+                    aria-label="Toggle menu" 
+                    aria-expanded={isMobileMenuOpen}
+                    onClick={toggleMobileMenu}
+                >
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+
+                {/* Brand Logo - Centered on Mobile */}
                 <Link href="/" className="brand" aria-label="Fidelity Investments - Home">
+                    <span className="mobile-brand-text">Fidelity</span>
                     <img 
                         src="/logo-horizontal.svg" 
                         alt="Fidelity Investment" 
-                        className="brand-logo"
+                        className="brand-logo desktop-only"
                     />
                 </Link>
 
-                {/* Utility Links and CTA Buttons */}
-                <div className="header-links">
+                {/* Mobile Log in Button - Right side */}
+                {loginButton && (
+                    <Link
+                        href={loginButton.href}
+                        className="mobile-login-btn"
+                        aria-label={loginButton.ariaLabel}
+                    >
+                        {loginButton.label}
+                    </Link>
+                )}
+
+                {/* Desktop Utility Links and CTA Buttons */}
+                <div className="header-links desktop-only">
                     {/* Utility Links (Customer Service, Fidelity Assistant, etc.) */}
                     {utilityLinks.map((link) => (
                         <Link
