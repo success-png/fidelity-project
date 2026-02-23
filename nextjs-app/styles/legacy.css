@@ -2847,3 +2847,324 @@
         font-size: 10px !important;
     }
 }
+
+/* ========================================
+   HERO SECTION - Mobile & Tablet Responsive
+   ======================================== */
+
+/* Mobile (≤768px) */
+@media (max-width: 768px) {
+    .hero {
+        padding-left: 0 !important;
+        padding-right: 0 !important;
+        min-height: 600px !important;
+    }
+    
+    .hero .container {
+        max-width: 100% !important;
+    }
+    
+    .hero .container {
+        padding-left: 0 !important;
+        padding-right: 0 !important;
+        max-width: 100% !important;
+    }
+    
+    .hero-card {
+        padding: 0 20px !important;
+        margin: 0 !important;
+        width: 100vw !important;
+        max-width: 100vw !important;
+        left: 0 !important;
+        right: 0 !important;
+    }
+    
+    .hero-title {
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif !important;
+        font-size: 32px !important;
+        line-height: 1.2 !important;
+        font-weight: 400 !important;
+    }
+    
+    .hero-desc {
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif !important;
+        font-size: 16px !important;
+        line-height: 1.5 !important;
+        margin-bottom: 24px !important;
+    }
+    
+    .hero-buttons {
+        display: flex !important;
+        flex-direction: row !important;
+        gap: 12px !important;
+        margin-bottom: 24px !important;
+    }
+    
+    .hero-buttons .btn {
+        flex: 1 !important;
+        min-width: 0 !important;
+        font-size: 11px !important;
+        padding: 10px 16px !important;
+        border-radius: 50px !important;
+        font-weight: 600 !important;
+    }
+    
+    .hero-image-mobile {
+        display: block !important;
+        width: 100vw !important;
+        margin: 20px 0 0 0 !important;
+        padding: 0 !important;
+        position: relative !important;
+        left: -20px !important;
+    }
+    
+    .hero-image-mobile img {
+        width: 100vw !important;
+        height: 320px !important;
+        object-fit: cover !important;
+        border-radius: 12px !important;
+        margin: 0 !important;
+        padding: 0 !important;
+        display: block !important;
+    }
+    
+    /* Slideshow Section - Mobile */
+    .slideshow-section {
+        padding: 0 !important;
+        margin: 0 !important;
+        background: #f8f9fa !important;
+    }
+    
+    .slideshow-section .container {
+        padding: 0 !important;
+        max-width: 100% !important;
+    }
+    
+    .slideshow-nav {
+        display: flex !important;
+        flex-wrap: wrap !important;
+        justify-content: center !important;
+        gap: 8px !important;
+        padding: 20px 20px 10px 20px !important;
+        background: transparent !important;
+    }
+    
+    .slideshow-btn {
+        background: #ffffff !important;
+        border: 1px solid #e0e0e0 !important;
+        border-radius: 20px !important;
+        padding: 8px 16px !important;
+        font-size: 12px !important;
+        font-weight: 500 !important;
+        color: #333 !important;
+        cursor: pointer !important;
+        transition: all 0.3s ease !important;
+        min-width: 0 !important;
+        flex: 0 0 auto !important;
+    }
+    
+    .slideshow-btn:hover {
+        background: #f0f0f0 !important;
+        border-color: #ccc !important;
+    }
+    
+    .slideshow-btn.active {
+        background: #0066cc !important;
+        border-color: #0066cc !important;
+        color: #ffffff !important;
+    }
+    
+    .slideshow-content {
+        position: relative !important;
+        width: 100% !important;
+        overflow: hidden !important;
+    }
+    
+    .slide {
+        display: none !important;
+        width: 100% !important;
+    }
+    
+    .slide.active {
+        display: block !important;
+    }
+    
+    .slide-image {
+        position: relative !important;
+        width: 100% !important;
+        margin: 0 !important;
+        padding: 0 !important;
+    }
+    
+    .slide-image img {
+        width: 100vw !important;
+        height: auto !important;
+        object-fit: cover !important;
+        display: block !important;
+        margin: 0 !important;
+        padding: 0 !important;
+    }
+    
+    .slide-link-area {
+        position: absolute !important;
+        background: transparent !important;
+        border: none !important;
+        cursor: pointer !important;
+        z-index: 10 !important;
+    }
+}
+
+/* Tablet (769px–1024px) */
+@media (min-width: 769px) and (max-width: 1024px) {
+    .hero {
+        padding-left: 0 !important;
+        padding-right: 0 !important;
+        min-height: 650px !important;
+    }
+    
+    .hero .container {
+        padding-left: 0 !important;
+        padding-right: 0 !important;
+        max-width: 100% !important;
+    }
+    
+    .hero-card {
+        padding: 0 40px !important;
+        margin: 0 auto !important;
+        width: 100% !important;
+        max-width: 100% !important;
+    }
+    
+    .hero-title {
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif !important;
+        font-size: 40px !important;
+        line-height: 1.15 !important;
+        font-weight: 400 !important;
+    }
+    
+    .hero-desc {
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif !important;
+        font-size: 18px !important;
+        line-height: 1.5 !important;
+        margin-bottom: 28px !important;
+    }
+    
+    .hero-buttons {
+        display: flex !important;
+        flex-direction: row !important;
+        gap: 16px !important;
+        margin-bottom: 28px !important;
+    }
+    
+    .hero-buttons .btn {
+        min-width: 140px !important;
+        font-size: 12px !important;
+        padding: 12px 20px !important;
+        border-radius: 50px !important;
+        font-weight: 500 !important;
+    }
+    
+    .hero-image-mobile {
+        display: block !important;
+        width: 100vw !important;
+        margin: 24px 0 0 0 !important;
+        padding: 0 !important;
+        position: relative !important;
+        left: -40px !important;
+    }
+    
+    .hero-image-mobile img {
+        width: 100vw !important;
+        height: 400px !important;
+        object-fit: cover !important;
+        border-radius: 12px !important;
+        margin: 0 !important;
+        padding: 0 !important;
+        display: block !important;
+    }
+    
+    /* Slideshow Section - Tablet */
+    .slideshow-section {
+        padding: 0 !important;
+        margin: 0 !important;
+        background: #f8f9fa !important;
+    }
+    
+    .slideshow-section .container {
+        padding: 0 !important;
+        max-width: 100% !important;
+    }
+    
+    .slideshow-nav {
+        display: flex !important;
+        flex-wrap: wrap !important;
+        justify-content: center !important;
+        gap: 12px !important;
+        padding: 30px 40px 15px 40px !important;
+        background: transparent !important;
+    }
+    
+    .slideshow-btn {
+        background: #ffffff !important;
+        border: 1px solid #e0e0e0 !important;
+        border-radius: 25px !important;
+        padding: 12px 20px !important;
+        font-size: 14px !important;
+        font-weight: 500 !important;
+        color: #333 !important;
+        cursor: pointer !important;
+        transition: all 0.3s ease !important;
+        min-width: 0 !important;
+        flex: 0 0 auto !important;
+    }
+    
+    .slideshow-btn:hover {
+        background: #f0f0f0 !important;
+        border-color: #ccc !important;
+    }
+    
+    .slideshow-btn.active {
+        background: #0066cc !important;
+        border-color: #0066cc !important;
+        color: #ffffff !important;
+    }
+    
+    .slideshow-content {
+        position: relative !important;
+        width: 100% !important;
+        overflow: hidden !important;
+    }
+    
+    .slide {
+        display: none !important;
+        width: 100% !important;
+    }
+    
+    .slide.active {
+        display: block !important;
+    }
+    
+    .slide-image {
+        position: relative !important;
+        width: 100% !important;
+        margin: 0 !important;
+        padding: 0 !important;
+    }
+    
+    .slide-image img {
+        width: 100vw !important;
+        height: auto !important;
+        object-fit: cover !important;
+        display: block !important;
+        margin: 0 !important;
+        padding: 0 !important;
+    }
+    
+    .slide-link-area {
+        position: absolute !important;
+        background: transparent !important;
+        border: none !important;
+        cursor: pointer !important;
+        z-index: 10 !important;
+    }
+}

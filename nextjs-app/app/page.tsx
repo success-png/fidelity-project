@@ -37,7 +37,7 @@ export default function HomePage() {
               </div>
 
               <div className="hero-image-mobile">
-                <img src="/images/img2.PNG" alt="Mobile hero illustration" />
+                <img src="/images/iiii.PNG" alt="Mobile hero illustration" />
               </div>
             </div>
           </div>
