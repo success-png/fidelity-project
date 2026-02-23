@@ -3,6 +3,7 @@
  * Green top bar with brand logo, utility links, and CTA buttons
  * Uses legacy CSS classes for exact UI replication
  */
+'use client';
 
 import React, { useState, useCallback, useEffect } from 'react';
 import Link from 'next/link';
@@ -34,18 +35,17 @@ export interface TopBarProps {
     className?: string;
     /** Whether user is authenticated */
     isAuthenticated?: boolean;
+    /** Whether mobile menu is open */
+    isMobileMenuOpen?: boolean;
+    /** Mobile menu toggle function */
+    onToggleMobileMenu?: () => void;
 }
 
-export function TopBar({ className = '', isAuthenticated = false }: TopBarProps): React.ReactElement {
-    const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+export function TopBar({ className = '', isAuthenticated = false, isMobileMenuOpen = false, onToggleMobileMenu }: TopBarProps): React.ReactElement {
     const utilityLinks = SECONDARY_NAV.filter((link) => isUtilityLink(link.id));
     const ctaButtons = SECONDARY_NAV.filter((link) => isCtaButton(link.id));
     const authenticatedLink = SECONDARY_NAV.find((link) => link.id === 'profile');
     const loginButton = ctaButtons.find((button) => button.id === 'login');
-
-    const toggleMobileMenu = useCallback(() => {
-        setIsMobileMenuOpen((prev) => !prev);
-    }, []);
 
     // Effect to add/remove 'is-open' class to body when mobile menu state changes
     useEffect(() => {
@@ -68,7 +68,7 @@ export function TopBar({ className = '', isAuthenticated = false }: TopBarProps)
                     type="button" 
                     aria-label="Toggle menu" 
                     aria-expanded={isMobileMenuOpen}
-                    onClick={toggleMobileMenu}
+                    onClick={onToggleMobileMenu}
                 >
                     <span></span>
                     <span></span>

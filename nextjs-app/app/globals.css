@@ -6,7 +6,6 @@
 @import "tailwindcss";
 @import "../styles/variables.css";
 @import "../styles/legacy.css";
-@import "../styles/globals.css";
 @import "../styles/typography.css";
 @import "../styles/utilities.css";
 

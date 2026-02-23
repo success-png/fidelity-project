@@ -10,7 +10,6 @@ import React, { useState, useCallback, useEffect } from 'react';
 import { MAIN_NAV } from '@/config/navigation';
 import type { NavSection } from '@/types/navigation';
 import { NavItem } from './NavItem';
-import { MobileMenu } from './MobileMenu';
 
 export interface NavigationProps {
     /** Optional additional CSS class */
@@ -48,12 +47,7 @@ export function Navigation({
     sections = MAIN_NAV,
     showSearch = true
 }: NavigationProps): React.ReactElement {
-    const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
     const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
-
-    const toggleMobileMenu = useCallback(() => {
-        setIsMobileMenuOpen((prev) => !prev);
-    }, []);
 
     const handleDropdownToggle = useCallback((dropdownId: string) => {
         setActiveDropdown((prev) => prev === dropdownId ? null : dropdownId);
@@ -113,12 +107,6 @@ export function Navigation({
 
             <div className="nav-right">
                 {showSearch && <SearchInput />}
-
-                <MobileMenu
-                    sections={sections}
-                    isOpen={isMobileMenuOpen}
-                    onToggle={toggleMobileMenu}
-                />
             </div>
         </>
     );

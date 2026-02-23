@@ -35,6 +35,10 @@ export default function HomePage() {
                   Start a Transfer
                 </Link>
               </div>
+
+              <div className="hero-image-mobile">
+                <img src="/images/img2.PNG" alt="Mobile hero illustration" />
+              </div>
             </div>
           </div>
         </section>
