@@ -1,0 +1,4 @@
+backend: cd "c:\Users\USER\OneDrive\Desktop\fidelity project\backend"
+node src/server-final.js
+
+front end: next.js app: pnpm dev

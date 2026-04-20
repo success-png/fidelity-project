@@ -1,6 +1,9 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
+import { ServiceWorkerRegistration } from "@/components/pwa/ServiceWorkerRegistration";
+import { InstallPrompt } from "@/components/pwa/InstallPrompt";
+import { OfflineDetector } from "@/components/pwa/OfflineDetector";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -13,12 +16,24 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Fidelity Investments - Retirement Plans, Investing, Brokerage, Wealth Management, Financial Planning and Advice, Online Trading",
-  description: "Fidelity Investments offers a wide range of investment products, retirement plans, and financial services to help you achieve your financial goals.",
+  title: "Fidelity Financial Assistant",
+  description: "Your personal financial assistant for banking, savings, investments, and retirement planning",
+  manifest: '/manifest.json',
   icons: {
     icon: '/logo-icon.svg',
     shortcut: '/logo-icon.svg',
     apple: '/logo-icon.svg',
+  },
+  themeColor: '#0052cc',
+  backgroundColor: '#ffffff',
+  viewport: 'width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, viewport-fit=cover',
+  appleWebApp: {
+    capable: true,
+    statusBarStyle: 'default',
+    title: 'Fidelity',
+  },
+  formatDetection: {
+    telephone: false,
   },
 };
 
@@ -35,6 +50,9 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
+        <ServiceWorkerRegistration />
+        <OfflineDetector />
+        <InstallPrompt />
         {children}
       </body>
     </html>
